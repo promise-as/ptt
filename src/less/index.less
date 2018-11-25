@@ -440,7 +440,7 @@ body{
   /*平台*/
   .home_platform {
     width: 100%;
-    height: 562px;
+    //height: 562px;
     background: rgba(242, 247, 251, 1);
     .container {
       //border: 1px solid blue;
@@ -455,7 +455,7 @@ body{
       .platform_mt5_container {
         margin-top: 147px;
         width: 598px;
-        height: 238px;
+        //height: 238px;
         //border: 1px solid green;
         .platform_mt5_content {
           width: 598px;
@@ -472,93 +472,114 @@ body{
             line-height: 24px;
           }
         }
-        .platform_download_versions {
+        .platform_app {
           margin-top: 41px;
-          height: 50px;
           display: flex;
           justify-content: space-between;
-          > div {
+          .app_download{
             width: 180px;
-            height: 50px;
-            border: 1px solid rgba(14, 72, 180, 1);
-            border-radius: 25px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            .download_container {
-              width: 120px;
-              height: 22px;
-              //border: 1px solid #000;
+            margin-bottom: 5px;
+            .download_item{
               display: flex;
-              justify-content: space-around;
-              > span {
-                //width:57px;
-                height: 16px;
-                font-size: 16px;
-                font-family: SourceHanSansCN-Regular;
-                font-weight: 400;
-
-                line-height: 24px
+              justify-content: center;
+              border-radius:25px;
+              cursor: pointer;
+              .btn_container{
+                width: 100px;
+                height: 50px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .item_icon {
+                  width: 22px;
+                  height: 22px;
+                }
+                .iOS_icon{
+                  background: url("../images/icon/home_icon_iphone_sel.png") no-repeat;
+                }
               }
             }
+            .QRcode{
+              width: 180px;
+              height: 180px;
+              border: 1px solid #0E48B4;
+              margin-top: 5px;
+              display: none;
+            }
           }
-          .platform_iOS {
-            background: #0E48B4;
-            .platform_iOS_icon {
-              width: 22px;
-              height: 22px;
-              //border: 1px solid red;
-              background: url("../images/icon/home_icon_iphone_sel.png");
-            }
-            span {
-              color: white;
-            }
-
-          }
-          .platform_Android {
-            .platform_Android_icon {
-              width: 22px;
-              height: 22px;
-              //border: 1px solid red;
-              background: url("../images/icon/home_icon_and_nor.png");
-            }
-            span {
-              color: #0E48B4;
-            }
-            &:hover {
+          .app_iOS{
+            height: 240px;
+            .download_item{
               background: #0E48B4;
-              span {
-                color: white;
+              .btn_container{
+                > span{
+                  color: white;
+                }
               }
-              .platform_Android_icon {
-                width: 22px;
-                height: 22px;
-                //border: 1px solid red;
-                background: url("../images/icon/home_icon_and_sel.png");
+            }
+            &:hover{
+              .QRcode{
+                display: block;
+                //background: url("../images/QRcode/01.png") no-repeat center;
+                background-size: cover;
+                text-indent: -9999px;
               }
             }
           }
-          .platform_Windows {
-            .platform_Windows_icon {
-              width: 22px;
-              height: 22px;
-              //border: 1px solid red;
-              background: url("../images/icon/home_icon_win_nor.png");
-            }
-            span {
-              color: #0E48B4;
-            }
-            &:hover {
-              background: #0E48B4;
-              span {
-                color: white;
+          .app_Android{
+            height: 240px;
+            .download_item{
+              border: 1px solid #0E48B4;
+              .btn_container{
+                .Android_icon{
+                  background: url("../images/icon/home_icon_and_nor.png") no-repeat;
+                }
+                > span{
+                  color: #0E48B4;
+                }
               }
-              .platform_Windows_icon {
-                width: 22px;
-                height: 22px;
-                //border: 1px solid red;
-                background: url("../images/icon/home_icon_win_se.png");
+            }
+            &:hover{
+              .download_item{
+                background: #0E48B4;
+              }
+              .btn_container{
+                .Android_icon{
+                  background: url("../images/icon/home_icon_and_sel.png") no-repeat;
+                }
+                > span{
+                  color: white;
+                }
+              }
+              .QRcode{
+                display: block;
+                //background: url("../images/QRcode/01.png") no-repeat center;
+                background-size: cover;
+                text-indent: -9999px;
+              }
+            }
+          }
+          .app_windows{
+            .download_item{
+              border: 1px solid #0E48B4;
+              .btn_container{
+                .windows_icon{
+                  background: url("../images/icon/home_icon_win_nor.png") no-repeat;
+                }
+                > span{
+                  color: #0E48B4;
+                }
+              }
+              &:hover{
+                background: #0E48B4;
+                .btn_container{
+                  .windows_icon{
+                    background: url("../images/icon/home_icon_win_se.png") no-repeat;
+                  }
+                  > span{
+                    color: white;
+                  }
+                }
               }
             }
           }

@@ -463,7 +463,6 @@ body {
 }
 .home_warp .home_platform {
   width: 100%;
-  height: 562px;
   background: #f2f7fb;
 }
 .home_warp .home_platform .container {
@@ -483,7 +482,6 @@ body {
 .home_warp .home_platform .container .platform_mt5_container {
   margin-top: 147px;
   width: 598px;
-  height: 238px;
 }
 .home_warp .home_platform .container .platform_mt5_container .platform_mt5_content {
   width: 598px;
@@ -499,9 +497,8 @@ body {
   color: #505050;
   line-height: 24px;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_download_versions {
+.home_warp .home_platform .container .platform_mt5_container .platform_app {
   margin-top: 41px;
-  height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -509,86 +506,104 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_download_versions > div {
+.home_warp .home_platform .container .platform_mt5_container .platform_app .app_download {
   width: 180px;
-  height: 50px;
-  border: 1px solid #0e48b4;
-  border-radius: 25px;
+  margin-bottom: 5px;
+}
+.home_warp .home_platform .container .platform_mt5_container .platform_app .app_download .download_item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  border-radius: 25px;
   cursor: pointer;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_download_versions > div .download_container {
-  width: 120px;
-  height: 22px;
+.home_warp .home_platform .container .platform_mt5_container .platform_app .app_download .download_item .btn_container {
+  width: 100px;
+  height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_download_versions > div .download_container > span {
-  height: 16px;
-  font-size: 16px;
-  font-family: SourceHanSansCN-Regular;
-  font-weight: 400;
-  line-height: 24px;
+.home_warp .home_platform .container .platform_mt5_container .platform_app .app_download .download_item .btn_container .item_icon {
+  width: 22px;
+  height: 22px;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_download_versions .platform_iOS {
+.home_warp .home_platform .container .platform_mt5_container .platform_app .app_download .download_item .btn_container .iOS_icon {
+  background: url("../images/icon/home_icon_iphone_sel.png") no-repeat;
+}
+.home_warp .home_platform .container .platform_mt5_container .platform_app .app_download .QRcode {
+  width: 180px;
+  height: 180px;
+  border: 1px solid #0E48B4;
+  margin-top: 5px;
+  display: none;
+}
+.home_warp .home_platform .container .platform_mt5_container .platform_app .app_iOS {
+  height: 240px;
+}
+.home_warp .home_platform .container .platform_mt5_container .platform_app .app_iOS .download_item {
   background: #0E48B4;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_download_versions .platform_iOS .platform_iOS_icon {
-  width: 22px;
-  height: 22px;
-  background: url("../images/icon/home_icon_iphone_sel.png");
-}
-.home_warp .home_platform .container .platform_mt5_container .platform_download_versions .platform_iOS span {
+.home_warp .home_platform .container .platform_mt5_container .platform_app .app_iOS .download_item .btn_container > span {
   color: white;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_download_versions .platform_Android .platform_Android_icon {
-  width: 22px;
-  height: 22px;
-  background: url("../images/icon/home_icon_and_nor.png");
+.home_warp .home_platform .container .platform_mt5_container .platform_app .app_iOS:hover .QRcode {
+  display: block;
+  background-size: cover;
+  text-indent: -9999px;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_download_versions .platform_Android span {
+.home_warp .home_platform .container .platform_mt5_container .platform_app .app_Android {
+  height: 240px;
+}
+.home_warp .home_platform .container .platform_mt5_container .platform_app .app_Android .download_item {
+  border: 1px solid #0E48B4;
+}
+.home_warp .home_platform .container .platform_mt5_container .platform_app .app_Android .download_item .btn_container .Android_icon {
+  background: url("../images/icon/home_icon_and_nor.png") no-repeat;
+}
+.home_warp .home_platform .container .platform_mt5_container .platform_app .app_Android .download_item .btn_container > span {
   color: #0E48B4;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_download_versions .platform_Android:hover {
+.home_warp .home_platform .container .platform_mt5_container .platform_app .app_Android:hover .download_item {
   background: #0E48B4;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_download_versions .platform_Android:hover span {
+.home_warp .home_platform .container .platform_mt5_container .platform_app .app_Android:hover .btn_container .Android_icon {
+  background: url("../images/icon/home_icon_and_sel.png") no-repeat;
+}
+.home_warp .home_platform .container .platform_mt5_container .platform_app .app_Android:hover .btn_container > span {
   color: white;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_download_versions .platform_Android:hover .platform_Android_icon {
-  width: 22px;
-  height: 22px;
-  background: url("../images/icon/home_icon_and_sel.png");
+.home_warp .home_platform .container .platform_mt5_container .platform_app .app_Android:hover .QRcode {
+  display: block;
+  background-size: cover;
+  text-indent: -9999px;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_download_versions .platform_Windows .platform_Windows_icon {
-  width: 22px;
-  height: 22px;
-  background: url("../images/icon/home_icon_win_nor.png");
+.home_warp .home_platform .container .platform_mt5_container .platform_app .app_windows .download_item {
+  border: 1px solid #0E48B4;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_download_versions .platform_Windows span {
+.home_warp .home_platform .container .platform_mt5_container .platform_app .app_windows .download_item .btn_container .windows_icon {
+  background: url("../images/icon/home_icon_win_nor.png") no-repeat;
+}
+.home_warp .home_platform .container .platform_mt5_container .platform_app .app_windows .download_item .btn_container > span {
   color: #0E48B4;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_download_versions .platform_Windows:hover {
+.home_warp .home_platform .container .platform_mt5_container .platform_app .app_windows .download_item:hover {
   background: #0E48B4;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_download_versions .platform_Windows:hover span {
-  color: white;
+.home_warp .home_platform .container .platform_mt5_container .platform_app .app_windows .download_item:hover .btn_container .windows_icon {
+  background: url("../images/icon/home_icon_win_se.png") no-repeat;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_download_versions .platform_Windows:hover .platform_Windows_icon {
-  width: 22px;
-  height: 22px;
-  background: url("../images/icon/home_icon_win_se.png");
+.home_warp .home_platform .container .platform_mt5_container .platform_app .app_windows .download_item:hover .btn_container > span {
+  color: white;
 }
 .home_warp .footer {
   width: 100%;
