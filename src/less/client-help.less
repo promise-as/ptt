@@ -1,0 +1,344 @@
+/*客户帮助css*/
+
+/*容器宽度*/
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  //border: 1px solid pink;
+}
+
+/*自定义滚动条*/
+.help_warp{
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 300;
+  &::-webkit-scrollbar {
+    width: 16px;
+    //z-index: 300;
+  }
+  /*定义滚动条轨道 内阴影+圆角*/
+  &::-webkit-scrollbar-track
+  {
+    background-color: #f1f1f1;
+  }
+  /*定义滑块 内阴影+圆角*/
+  &::-webkit-scrollbar-thumb
+  {
+    background-color: #999999;
+  }
+}
+
+/*客户帮助*/
+.help_warp{
+  /*头部*/
+  .help_header{
+    background: url("../images/bg/bg_help.jpg") no-repeat;
+    /*导航条*/
+    .nav_bar {
+      width: 100%;
+      height: 60px;
+      background-color: #0E48B4;
+      position: fixed;
+      top: 0;
+      //left: 0;
+      z-index: 200;
+      box-shadow: 0 2px 2px rgba(0,0,0,.2);
+      .container {
+        display: flex;
+        justify-content: space-between;
+        .logo {
+          > a {
+            width: 118px;
+            height: 24px;
+            //border: 1px solid pink;
+            margin-top: 18px;
+            background: url("../images/logo/home_footer_logo.png") no-repeat;
+            text-indent: -9999px;
+          }
+        }
+        .nav {
+          //border: 1px solid red;
+          display: flex;
+          > a {
+            //border: 1px solid blue;
+            height: 60px;
+            > span {
+              color: white;
+              display: block;
+              padding: 0 35px;
+              line-height: 60px;
+              &.active {
+                color: #FFD24C;
+              }
+            }
+            > em {
+              display: none;
+              width: 6px;
+              height: 6px;
+              border-radius: 50%;
+              background-color: white;
+              position: relative;
+              top: -16px;
+              left: 0;
+              right: 0;
+              margin: auto;
+              &.active {
+                display: block;
+                background-color: #FFD24C;
+              }
+            }
+            &:hover {
+              > span {
+                color: #FFD24C;
+              }
+              > em {
+                display: block;
+                background-color: #FFD24C;
+              }
+            }
+          }
+        }
+      }
+    }
+    /*banner*/
+    .help_banner{
+      width: 100%;
+      margin-top: 60px;
+      .container{
+        //border: 1px solid #ffffff;
+        height: 418px;
+        color: white;
+        display: flex;
+        flex-flow: column nowrap;
+        //justify-content: center;
+        align-items: center;
+        .banner_h2{
+          margin-top: 171px;
+          font-size: 45px;
+          line-height: 80px;
+        }
+        > p{
+          line-height: 30px;
+        }
+      }
+    }
+  }
+  /*主体*/
+  .help_main{
+    .container{
+      //height: 1000px;
+      .main_tab{
+        height:126px;
+        background: white;
+        box-shadow:0px 3px 26px 2px rgba(14,72,180,0.08);
+        border-radius:4px;
+        margin-top: -56px;
+        margin-bottom: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .main_tab_body{
+          width: 1046px;
+          //border: 1px solid #000;
+          display: flex;
+          justify-content: space-between;
+          .tab_body_item{
+            width: 158px;
+            height: 44px;
+            //border: 1px solid #000;
+            border-radius:22px;
+            text-align: center;
+            line-height: 44px;
+            cursor: pointer;
+            color: #000527;
+            &:first-child{
+              background-color: #0E48B4;
+              color: white;
+            }
+            &:hover{
+              background-color: #0E48B4;
+              color: white;
+            }
+          }
+        }
+      }
+      .main_card{
+        //margin-bottom: 80px;
+        //border: 1px solid #000;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        .card_item{
+          width: 560px;
+          height: 300px;
+          border: 1px solid #000;
+          background-color: #F2F1EF;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 60px;
+          border-radius: 4px;
+          .item_vessel{
+            width: 400px;
+            height: 205px;
+            //border: 1px solid white;
+            display: flex;
+            justify-content: space-between;
+            .vessel_left{
+              width: 20px;
+              height: 4px;
+              background-color: #0E48B4;
+            }
+            .vessel_right{
+              width: 311px;
+              height: 205px;
+              //border: 1px solid green;
+              margin-top: -12px;
+              > h3{
+                font-size: 24px;
+                color: #000527;
+                line-height: 40px;
+              }
+              .right_text{
+                margin-top: 20px;
+                //border: 1px solid #000;
+                overflow:hidden;
+                text-overflow:ellipsis;
+                display:-webkit-box;
+                -webkit-box-orient:vertical;
+                -webkit-line-clamp:3;
+                line-height: 24px;
+              }
+              > a{
+                font-size: 14px;
+                color: #0E48B4;
+                margin-top: 28px;
+              }
+            }
+          }
+          &.checked{
+            background-color: #0E48B4;
+            .vessel_left{
+              background-color: #F2F1EF;
+            }
+            .vessel_right{
+              > h3{
+                color: white;
+              }
+              .right_text{
+                color: white;
+              }
+              > a{
+                color: white;
+              }
+            }
+          }
+          &:hover{
+            background-color: #0E48B4;
+            .vessel_left{
+              background-color: white;
+            }
+            .vessel_right{
+              > h3{
+                color: white;
+              }
+              > .right_text{
+                color: white;
+              }
+              > a{
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  /*底部*/
+  .footer {
+    width: 100%;
+    //height: 412px;
+    background: #0E48B4;
+    .container {
+      //height: 214px;
+      //border: 1px solid #000;
+      .footer_main {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 50px;
+        margin-bottom: 30px;
+        > div {
+          font-size: 14px;
+          line-height: 24px;
+          > a {
+            color: #B9D2EB;
+            white-space: nowrap;
+            &:first-child {
+              color: white;
+            }
+            &:hover {
+              color: white;
+            }
+          }
+          > p {
+            color: #B9D2EB;
+          }
+        }
+        .footer_logo {
+          > a {
+            width: 118px;
+            height: 24px;
+            //border: 1px solid pink;
+            //margin-top: 18px;
+            background: url("../images/logo/home_footer_logo.png") no-repeat;
+            text-indent: -9999px;
+          }
+        }
+        .footer_risk {
+          width: 550px;
+          height: 135px;
+        }
+        .footer_help {
+          width: 56px;
+          height: 134px;
+        }
+        .footer_account {
+          width: 57px;
+          height: 86px;
+        }
+        .footer_about_us {
+          width: 56px;
+          height: 110px;
+        }
+      }
+      .footer_policy {
+        //border: 1px solid white;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 14px;
+        line-height: 24px;
+        > h3 {
+          color: white;
+        }
+        > p {
+          color: #B9D2EB;
+        }
+      }
+      .footer_address {
+        font-style: normal;
+        color: #B9D2EB;
+        p {
+          text-align: center;
+          height: 74px;
+          line-height: 74px;
+        }
+      }
+    }
+    .footer_line {
+      width: 100%;
+      height: 1px;
+      background: rgba(0, 93, 184, 1);
+    }
+  }
+}

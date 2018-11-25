@@ -1,0 +1,234 @@
+/*风险提示css*/
+/*容器宽度*/
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*自定义滚动条*/
+.risk_warp {
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 300;
+  /*定义滚动条轨道 内阴影+圆角*/
+  /*定义滑块 内阴影+圆角*/
+}
+.risk_warp::-webkit-scrollbar {
+  width: 16px;
+}
+.risk_warp::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+.risk_warp::-webkit-scrollbar-thumb {
+  background-color: #999999;
+}
+/*风险提示*/
+.risk_warp {
+  /*头部*/
+  /*高风险*/
+  /*底部*/
+}
+.risk_warp .risk_header {
+  /*导航条*/
+  /*banner*/
+}
+.risk_warp .risk_header .nav_bar {
+  width: 100%;
+  height: 60px;
+  background-color: #0E48B4;
+  position: fixed;
+  top: 0;
+  z-index: 200;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+.risk_warp .risk_header .nav_bar .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.risk_warp .risk_header .nav_bar .container .logo > a {
+  width: 118px;
+  height: 24px;
+  margin-top: 18px;
+  background: url("../images/logo/home_footer_logo.png") no-repeat;
+  text-indent: -9999px;
+}
+.risk_warp .risk_header .nav_bar .container .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.risk_warp .risk_header .nav_bar .container .nav > a {
+  height: 60px;
+}
+.risk_warp .risk_header .nav_bar .container .nav > a > span {
+  color: white;
+  display: block;
+  padding: 0 35px;
+  line-height: 60px;
+}
+.risk_warp .risk_header .nav_bar .container .nav > a > span.active {
+  color: #FFD24C;
+}
+.risk_warp .risk_header .nav_bar .container .nav > a > em {
+  display: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  top: -16px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.risk_warp .risk_header .nav_bar .container .nav > a > em.active {
+  display: block;
+  background-color: #FFD24C;
+}
+.risk_warp .risk_header .nav_bar .container .nav > a:hover > span {
+  color: #FFD24C;
+}
+.risk_warp .risk_header .nav_bar .container .nav > a:hover > em {
+  display: block;
+  background-color: #FFD24C;
+}
+.risk_warp .risk_header .risk_banner {
+  width: 100%;
+  background: url("../images/bg/bg_risk.png") #0E48B4 no-repeat;
+  margin-top: 60px;
+}
+.risk_warp .risk_header .risk_banner .container {
+  height: 420px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.risk_warp .risk_header .risk_banner .container .banner_h2 {
+  font-size: 45px;
+  line-height: 80px;
+}
+.risk_warp .risk_header .risk_banner .container > p {
+  line-height: 30px;
+}
+.risk_warp .high_risk .container {
+  margin-top: 100px;
+}
+.risk_warp .high_risk .container .high_risk_h3 {
+  margin-bottom: 40px;
+  font-size: 24px;
+  font-family: PingFang-SC-Heavy;
+  font-weight: 800;
+  color: #0e48b4;
+  line-height: 40px;
+}
+.risk_warp .high_risk .container .high_risk_content .high_risk_h4 {
+  color: #000527;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.risk_warp .high_risk .container .high_risk_content > p {
+  color: #505050;
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 40px;
+}
+.risk_warp .high_risk .container .high_risk_content > p.hint {
+  color: #0e48b4;
+}
+.risk_warp .footer {
+  width: 100%;
+  background: #0E48B4;
+}
+.risk_warp .footer .container .footer_main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 50px;
+  margin-bottom: 30px;
+}
+.risk_warp .footer .container .footer_main > div {
+  font-size: 14px;
+  line-height: 24px;
+}
+.risk_warp .footer .container .footer_main > div > a {
+  color: #B9D2EB;
+  white-space: nowrap;
+}
+.risk_warp .footer .container .footer_main > div > a:first-child {
+  color: white;
+}
+.risk_warp .footer .container .footer_main > div > a:hover {
+  color: white;
+}
+.risk_warp .footer .container .footer_main > div > p {
+  color: #B9D2EB;
+}
+.risk_warp .footer .container .footer_main .footer_logo > a {
+  width: 118px;
+  height: 24px;
+  background: url("../images/logo/home_footer_logo.png") no-repeat;
+  text-indent: -9999px;
+}
+.risk_warp .footer .container .footer_main .footer_risk {
+  width: 550px;
+  height: 135px;
+}
+.risk_warp .footer .container .footer_main .footer_help {
+  width: 56px;
+  height: 134px;
+}
+.risk_warp .footer .container .footer_main .footer_account {
+  width: 57px;
+  height: 86px;
+}
+.risk_warp .footer .container .footer_main .footer_about_us {
+  width: 56px;
+  height: 110px;
+}
+.risk_warp .footer .container .footer_policy {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 24px;
+}
+.risk_warp .footer .container .footer_policy > h3 {
+  color: white;
+}
+.risk_warp .footer .container .footer_policy > p {
+  color: #B9D2EB;
+}
+.risk_warp .footer .container .footer_address {
+  font-style: normal;
+  color: #B9D2EB;
+}
+.risk_warp .footer .container .footer_address p {
+  text-align: center;
+  height: 74px;
+  line-height: 74px;
+}
+.risk_warp .footer .footer_line {
+  width: 100%;
+  height: 1px;
+  background: #005db8;
+}

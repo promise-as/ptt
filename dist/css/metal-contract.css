@@ -1,0 +1,324 @@
+/*金属合约css*/
+/*容器宽度*/
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*自定义滚动条*/
+.metal_warp {
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 300;
+  /*定义滚动条轨道 内阴影+圆角*/
+  /*定义滑块 内阴影+圆角*/
+}
+.metal_warp::-webkit-scrollbar {
+  width: 16px;
+}
+.metal_warp::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+.metal_warp::-webkit-scrollbar-thumb {
+  background-color: #999999;
+}
+/*金属合约*/
+.metal_warp {
+  /*头部*/
+  /*主体*/
+  /*底部*/
+}
+.metal_warp .metal_header {
+  background: url("../images/bg/bg_gold.jpg") no-repeat;
+  /*导航条*/
+  /*banner*/
+}
+.metal_warp .metal_header .nav_bar {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  z-index: 200;
+  background-color: #0E48B4;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+.metal_warp .metal_header .nav_bar .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.metal_warp .metal_header .nav_bar .container .logo > a {
+  width: 118px;
+  height: 24px;
+  margin-top: 18px;
+  background: url("../images/logo/home_footer_logo.png") no-repeat;
+  text-indent: -9999px;
+}
+.metal_warp .metal_header .nav_bar .container .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.metal_warp .metal_header .nav_bar .container .nav > a {
+  height: 60px;
+}
+.metal_warp .metal_header .nav_bar .container .nav > a > span {
+  color: white;
+  display: block;
+  padding: 0 35px;
+  line-height: 60px;
+}
+.metal_warp .metal_header .nav_bar .container .nav > a > span.active {
+  color: #FFD24C;
+}
+.metal_warp .metal_header .nav_bar .container .nav > a > em {
+  display: none;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  top: -16px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.metal_warp .metal_header .nav_bar .container .nav > a > em.active {
+  display: block;
+  background-color: #FFD24C;
+}
+.metal_warp .metal_header .nav_bar .container .nav > a:hover > span {
+  color: #FFD24C;
+}
+.metal_warp .metal_header .nav_bar .container .nav > a:hover > em {
+  display: block;
+  background-color: #FFD24C;
+}
+.metal_warp .metal_header .variety_banner {
+  width: 100%;
+  margin-top: 60px;
+}
+.metal_warp .metal_header .variety_banner .container {
+  height: 418px;
+}
+.metal_warp .metal_main .container .main_card {
+  margin-top: -166px;
+  background-color: white;
+  -webkit-box-shadow: 0px 3px 26px 2px rgba(14, 72, 180, 0.08);
+          box-shadow: 0px 3px 26px 2px rgba(14, 72, 180, 0.08);
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+.metal_warp .metal_main .container .main_card .main_card_logo {
+  width: 200px;
+  height: 200px;
+  background: url("../images/icon/platform_icon_gold.png") no-repeat #0E48B4 center;
+  border-radius: 50%;
+  margin-top: 100px;
+}
+.metal_warp .metal_main .container .main_card .main_card_title {
+  margin-top: 40px;
+}
+.metal_warp .metal_main .container .main_card .main_card_title > h2 {
+  font-size: 30px;
+  color: #0E48B4;
+}
+.metal_warp .metal_main .container .main_card .main_card_title > span {
+  font-size: 14px;
+  color: #505050;
+  line-height: 24px;
+}
+.metal_warp .metal_main .container .main_card .main_card_detail {
+  width: 1000px;
+  font-size: 14px;
+  color: #505050;
+  line-height: 24px;
+  text-align: left;
+  margin-bottom: 88px;
+}
+.metal_warp .metal_main .container .main_card .main_card_detail > p {
+  margin-top: 57px;
+}
+.metal_warp .metal_main .container .main_product .product_tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 100px;
+}
+.metal_warp .metal_main .container .main_product .product_tab .product_column {
+  text-align: center;
+  line-height: 60px;
+}
+.metal_warp .metal_main .container .main_product .product_tab .product_column .product_name {
+  background-color: #0E48B4;
+  color: white;
+}
+.metal_warp .metal_main .container .main_product .product_tab .product_column:first-child {
+  width: 164px;
+}
+.metal_warp .metal_main .container .main_product .product_tab .product_column:first-child .product_gold {
+  border-left: 1px solid #E6E6E6;
+}
+.metal_warp .metal_main .container .main_product .product_tab .product_column:first-child .product_silver {
+  border-left: 1px solid #E6E6E6;
+}
+.metal_warp .metal_main .container .main_product .product_tab .product_column:nth-child(2) {
+  width: 164px;
+}
+.metal_warp .metal_main .container .main_product .product_tab .product_column:nth-child(3) {
+  width: 437px;
+}
+.metal_warp .metal_main .container .main_product .product_tab .product_column:last-child {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.metal_warp .metal_main .container .main_product .product_tab .product_column:last-child .product_name {
+  border-right: 1px solid #0E48B4;
+}
+.metal_warp .metal_main .container .main_product .product_tab .product_column:last-child .product_time {
+  height: 121px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #505050;
+}
+.metal_warp .metal_main .container .main_product .product_tab .product_column:last-child .product_time .time_container {
+  width: 313px;
+  height: 61px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: left;
+  font-size: 14px;
+  line-height: 24px;
+  margin-top: -8px;
+}
+.metal_warp .metal_main .container .main_product .product_tab .product_column > div {
+  height: 60px;
+  border-right: 1px solid #E6E6E6;
+  border-bottom: 1px solid #E6E6E6;
+  background-color: white;
+}
+.metal_warp .metal_main .container .main_product .product_tab .product_column .product_gold {
+  color: #505050;
+}
+.metal_warp .metal_main .container .main_product .product_tab .product_column .product_silver {
+  color: #505050;
+}
+.metal_warp .metal_main .container .main_product .product_explain {
+  height: 56px;
+  background-color: #F2F1EF;
+  text-align: center;
+  line-height: 56px;
+  font-size: 14px;
+  color: #FF1818;
+  margin-bottom: 150px;
+}
+.metal_warp .footer {
+  width: 100%;
+  background: #0E48B4;
+}
+.metal_warp .footer .container .footer_main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 50px;
+  margin-bottom: 30px;
+}
+.metal_warp .footer .container .footer_main > div {
+  font-size: 14px;
+  line-height: 24px;
+}
+.metal_warp .footer .container .footer_main > div > a {
+  color: #B9D2EB;
+  white-space: nowrap;
+}
+.metal_warp .footer .container .footer_main > div > a:first-child {
+  color: white;
+}
+.metal_warp .footer .container .footer_main > div > a:hover {
+  color: white;
+}
+.metal_warp .footer .container .footer_main > div > p {
+  color: #B9D2EB;
+}
+.metal_warp .footer .container .footer_main .footer_logo > a {
+  width: 118px;
+  height: 24px;
+  background: url("../images/logo/home_footer_logo.png") no-repeat;
+  text-indent: -9999px;
+}
+.metal_warp .footer .container .footer_main .footer_risk {
+  width: 550px;
+  height: 135px;
+}
+.metal_warp .footer .container .footer_main .footer_help {
+  width: 56px;
+  height: 134px;
+}
+.metal_warp .footer .container .footer_main .footer_account {
+  width: 57px;
+  height: 86px;
+}
+.metal_warp .footer .container .footer_main .footer_about_us {
+  width: 56px;
+  height: 110px;
+}
+.metal_warp .footer .container .footer_policy {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 24px;
+}
+.metal_warp .footer .container .footer_policy > h3 {
+  color: white;
+}
+.metal_warp .footer .container .footer_policy > p {
+  color: #B9D2EB;
+}
+.metal_warp .footer .container .footer_address {
+  font-style: normal;
+  color: #B9D2EB;
+}
+.metal_warp .footer .container .footer_address p {
+  text-align: center;
+  height: 74px;
+  line-height: 74px;
+}
+.metal_warp .footer .footer_line {
+  width: 100%;
+  height: 1px;
+  background: #005db8;
+}
