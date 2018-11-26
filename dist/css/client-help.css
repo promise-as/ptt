@@ -161,11 +161,11 @@
   cursor: pointer;
   color: #000527;
 }
-.help_warp .help_main .container .main_tab .main_tab_body .tab_body_item:first-child {
+.help_warp .help_main .container .main_tab .main_tab_body .tab_body_item:hover {
   background-color: #0E48B4;
   color: white;
 }
-.help_warp .help_main .container .main_tab .main_tab_body .tab_body_item:hover {
+.help_warp .help_main .container .main_tab .main_tab_body .active {
   background-color: #0E48B4;
   color: white;
 }

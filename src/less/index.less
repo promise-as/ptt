@@ -473,12 +473,14 @@ body{
           }
         }
         .platform_app {
+          height: 245px;
           margin-top: 41px;
           display: flex;
           justify-content: space-between;
           .app_download{
             width: 180px;
             margin-bottom: 5px;
+            //border: 1px solid #000;
             .download_item{
               display: flex;
               justify-content: center;
@@ -502,13 +504,12 @@ body{
             .QRcode{
               width: 180px;
               height: 180px;
-              border: 1px solid #0E48B4;
+              //border: 1px solid #0E48B4;
               margin-top: 5px;
               display: none;
             }
           }
           .app_iOS{
-            height: 240px;
             .download_item{
               background: #0E48B4;
               .btn_container{
@@ -517,8 +518,11 @@ body{
                 }
               }
             }
+
             &:hover{
               .QRcode{
+                width: 180px;
+                height: 180px;
                 display: block;
                 //background: url("../images/QRcode/01.png") no-repeat center;
                 background-size: cover;

@@ -159,12 +159,13 @@
   text-align: center;
   line-height: 44px;
   cursor: pointer;
+  color: #000527;
 }
-.article_warp .article_main .container .main_tab .main_tab_body .tab_body_item:first-child {
+.article_warp .article_main .container .main_tab .main_tab_body .tab_body_item:hover {
   background-color: #0E48B4;
   color: white;
 }
-.article_warp .article_main .container .main_tab .main_tab_body .tab_body_item:hover {
+.article_warp .article_main .container .main_tab .main_tab_body .active {
   background-color: #0E48B4;
   color: white;
 }

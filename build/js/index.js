@@ -1,25 +1,27 @@
-"use strict";
+'use strict';
 
 // 头部右侧导航
-var list = document.querySelectorAll('.nav > a');
+var navList = document.querySelectorAll('.nav > a');
 
-var _loop = function _loop(i) {
-    list[i].onclick = function () {
-        for (var j = 0; j < list.length; j++) {
-            list[j].children[0].classList.remove("active");
-            list[j].children[1].classList.remove("active");
-        }
-        list[i].children[0].classList.add("active");
-        list[i].children[1].classList.add("active");
+// 客户帮助 和 文章详情的 tab
+var helpList = document.querySelectorAll('.main_tab_body > .tab_body_item');
+
+function active(activeList) {
+    var _loop = function _loop(i, len) {
+        activeList[i].onclick = function () {
+            for (var j = 0; j < len; j++) {
+                activeList[j].classList.remove("active");
+            }
+            activeList[i].classList.add("active");
+        };
     };
-};
 
-for (var i = 0; i < list.length; i++) {
-    _loop(i);
-};
+    for (var i = 0, len = activeList.length; i < len; i++) {
+        _loop(i, len);
+    }
+}
 
-// 金属合约头部滚动一定的距离的固定
-// let navBar = document.querySelector(".metal_header nav_bar");
-//
-// console.log(navBar);
-// console.log('111111111111');
+// 导航
+active(navList);
+// 客户帮助 和 文章详情
+active(helpList);

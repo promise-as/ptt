@@ -72,14 +72,14 @@ gulp.task('watch', ['default'], function () {
         livereload: true,
         // port: 4000,
 
-        // host: '192.168.3.68', // 公司ip地址
-        host: '192.168.1.152',
+        host: '192.168.3.68', // 公司ip地址
+        // host: '192.168.1.152',
         port: 5000,
     });
     // 打开网页
     // open("http://localhost:4000");
-    // open("http://192.168.3.68:5000");
-    open("http://192.168.1.152:5000");
+    open("http://192.168.3.68:5000");
+    // open("http://192.168.1.152:5000");
     // 配置监视任务
     gulp.watch('./src/js/*.js', ['minifyjs']);
     gulp.watch('./src/less/*.less', ['minifycss']);
