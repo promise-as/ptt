@@ -50,6 +50,7 @@ body{
       }
       .nav {
         float: right;
+        margin-right: -35px;
         a {
           //border: 1px solid blue;
           height: 60px;
@@ -485,8 +486,6 @@ body{
   background: rgba(242, 247, 251, 1);
   .container {
     //border: 1px solid blue;
-    //display: flex;
-    //justify-content: space-between;
     .clearfix();
     .platform_img {
       width: 424px;
@@ -504,12 +503,12 @@ body{
         width: 598px;
         height: 175px;
         //border: 1px solid red;
-        > h3 {
+        h3 {
           font-size: 24px;
           color: #000527;
           margin-bottom: 10px;
         }
-        > p {
+        p {
           font-size: 14px;
           color: #505050;
           line-height: 24px;
@@ -540,6 +539,7 @@ body{
               width: 22px;
               height: 22px;
               margin-right: 16px;
+              background: url("../images/icon/home_icon_iphone_nor.png");
             }
             span{
               display: inline-block;
@@ -572,40 +572,44 @@ body{
             }
           }
           &:nth-of-type(1){
-            .detail{
-              .icon{
-                background: url("../images/icon/home_icon_iphone_sel.png");
-              }
-              &.active, &:hover{
+            &.active{
+              .detail{
                 .icon{
-                  background: url("../images/icon/home_icon_iphone_nor.png");
+                  background: url("../images/icon/home_icon_iphone_sel.png");
                 }
               }
             }
-
-          }
-          &:nth-of-type(2){
             .detail{
               .icon{
-                background: url("../images/icon/home_icon_and_nor.png");
+                background: url("../images/icon/home_icon_iphone_nor.png");
               }
-              &.active, &:hover{
+            }
+          }
+          &:nth-of-type(2){
+            &.active{
+              .detail{
                 .icon{
                   background: url("../images/icon/home_icon_and_sel.png");
                 }
               }
             }
-
-          }
-          &:nth-of-type(3){
             .detail{
               .icon{
-                background: url("../images/icon/home_icon_win_nor.png");
+                background: url("../images/icon/home_icon_and_nor.png");
               }
-              &.active, &:hover{
+            }
+          }
+          &:nth-of-type(3){
+            &.active{
+              .detail{
                 .icon{
                   background: url("../images/icon/home_icon_win_sel.png");
                 }
+              }
+            }
+            .detail{
+              .icon{
+                background: url("../images/icon/home_icon_win_nor.png");
               }
             }
           }
@@ -617,58 +621,56 @@ body{
 /*底部*/
 .footer {
   width: 100%;
-  //height: 412px;
   background: #0E48B4;
   .container {
-    //height: 214px;
     //border: 1px solid #000;
     .footer_main {
-      display: flex;
-      justify-content: space-between;
       padding-top: 50px;
       margin-bottom: 30px;
-      > div {
-        font-size: 14px;
-        line-height: 24px;
-        > a {
-          color: #B9D2EB;
-          white-space: nowrap;
-          &:first-child {
-            color: white;
-          }
-          &:hover {
-            color: white;
-          }
+      font-size: 14px;
+      line-height: 24px;
+      .clearfix();
+      a {
+        color: #B9D2EB;
+        white-space: nowrap;
+        &:first-child {
+          color: white;
         }
-        > p {
-          color: #B9D2EB;
+        &:hover {
+          color: white;
         }
       }
+      p {
+        color: #B9D2EB;
+      }
       .footer_logo {
-        > a {
+        float: left;
+        a {
           width: 118px;
           height: 24px;
           //border: 1px solid pink;
-          //margin-top: 18px;
           background: url("../images/logo/home_footer_logo.png") no-repeat;
           text-indent: -9999px;
         }
       }
       .footer_risk {
-        width: 550px;
-        height: 135px;
+        width: 505px;
+        float: left;
+        margin-left: 100px;
       }
       .footer_help {
         width: 56px;
-        height: 134px;
+        float: left;
+        margin-left: 100px;
       }
       .footer_account {
         width: 57px;
-        height: 86px;
+        float: left;
+        margin-left: 100px;
       }
       .footer_about_us {
         width: 56px;
-        height: 110px;
+        float: right;
       }
     }
     .footer_policy {
@@ -677,10 +679,10 @@ body{
       margin-bottom: 30px;
       font-size: 14px;
       line-height: 24px;
-      > h3 {
+      h3 {
         color: white;
       }
-      > p {
+      p {
         color: #B9D2EB;
       }
     }
