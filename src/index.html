@@ -4,40 +4,44 @@
   <meta charset="UTF-8">
   <title>ptt官网</title>
   <link rel="icon" href="./images/bmp/ptt.bmp" type="image/x-icon">
-  <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/index.css">
+
+  <script src="https://cdn.bootcss.com/jquery/1.12.3/jquery.min.js"></script>
 </head>
 <body>
 <div class="home_warp">
   <!--头部-->
-  <header class="home_header">
-    <nav class="nav_bar">
+  <div class="home-header">
+    <nav class="nav-bar">
       <div class="container">
         <div class="logo">
-          <a href="./index.html">ptt</a>
+          <a href="index.html">
+            <img src="images/logo/home_footer_logo.png" alt="ptt">
+          </a>
         </div>
         <nav class="nav">
-          <a href="./index.html">
-            <span class="active">首页</span>
-            <em class="active"></em>
+          <a href="index.html" class="active">
+            <span>首页</span>
+            <em></em>
           </a>
-          <a href="./risk-warning.html">
+          <a href="risk-warning.html">
             <span>风险提示</span>
             <em></em>
           </a>
-          <a href="./platform.html">
+          <a href="platform.html">
             <span>交易平台</span>
             <em></em>
           </a>
-          <a href="./variety.html">
+          <a href="variety.html">
             <span>交易品种</span>
             <em></em>
           </a>
-          <a href="./client-help.html">
+          <a href="client-help.html">
             <span>客户帮助</span>
             <em></em>
           </a>
-          <a href="./about-us.html">
+          <a href="about-us.html">
             <span>关于我们</span>
             <em></em>
           </a>
@@ -45,54 +49,54 @@
       </div>
     </nav>
     <!--banner-->
-    <div class="home_banner">
+    <div class="home-banner">
       <div class="container">
-        <div class="banner_logo"></div>
-        <h2 class="banner_h2">为交易而生</h2>
+        <img src="images/logo/banner_logo.png" alt="banner_logo" class="banner-logo">
+        <h2 class="banner-h2">为交易而生</h2>
         <p>您最值得选择的全球金融衍生品在线交易经纪商！顶级银行提供流动性,STP直通国际市场，拒绝滑点，毫秒成交！</p>
         <p>PTT合作机构：LMAX ，CFH，瑞银集团，摩根大通，巴黎银行，德意志银行，花旗银行，汇丰银行。</p>
-        <a class="banner_arrows" href="#topAnchor"></a>
+        <a class="banner-arrows" href="#topAnchor">
+          <img src="images/icon/home_arrow_down.png" alt="箭头">
+        </a>
       </div>
     </div>
-  </header>
+  </div>
   <!--特色-->
-  <div class="home_feature" id="topAnchor">
+  <div class="home-feature" id="topAnchor">
     <div class="container">
-      <ul class="feature_ul">
+      <ul class="feature-ul">
         <li>
-          <i class="money"></i>
+          <img src="images/icon/feature_icon_1.png" alt="1">
           <h3>超低交易点差成本</h3>
           <p>在多家银行及流动性提供商出价后，系统自动筛选点差最低、
             对投资者最有优势的报价显示出来并提供成交。</p>
         </li>
         <li>
-          <i class="flexible"></i>
+          <img src="images/icon/feature_icon_2.png" alt="2">
           <h3>交易杠杆灵活自设</h3>
           <p>客户可随时根据自身需求调整交易保证金比例，
             1：1至500倍的保证金比例随意设置，方便应对风险。</p>
         </li>
         <li>
-          <i class="straight"></i>
+          <img src="images/icon/feature_icon_3.png" alt="3">
           <h3>STP直通交易模式</h3>
           <p>采用无交易员的STP直通模式，让所有客户的订单可以直通国际市场成交，
             为客户提供公平的交易环境。</p>
         </li>
-      </ul>
-      <ul class="feature_ul">
         <li>
-          <i class="safety"></i>
+          <img src="images/icon/feature_icon_4.png" alt="4">
           <h3>交易资金安全隔离</h3>
           <p>根据监管规定，将您的资金与可信赖的金融机构隔离存放，
             并且全程由银行提供加密技术，保证资金安全。</p>
         </li>
         <li>
-          <i class="avoid"></i>
+          <img src="images/icon/feature_icon_5.png" alt="5">
           <h3>极端行情穿仓免赔</h3>
           <p>在极端行情中，假设由于市场波动剧烈且市场流动性异常导致的穿仓现象，
             我们不向客户索取穿仓负值赔偿。</p>
         </li>
         <li>
-          <i class="defend"></i>
+          <img src="images/icon/feature_icon_6.png" alt="6">
           <h3>世界顶级IT防护</h3>
           <p>世界顶级IT安全服务提供商—美国COMODO 提供全站防护，
             保证客户信息账户安全，风险赔偿高达175万美金！</p>
@@ -101,20 +105,24 @@
     </div>
   </div>
   <!--全球-->
-  <div class="home_global">
+  <div class="home-global">
     <div class="container">
-      <div class="global_left">
-        <div class="global_left_content">
+      <div class="global-item left">
+        <img src="images/icon/adv_icon_quick.png" alt="">
+        <div class="content">
           <h3>急速的交易感受</h3>
           <p>我们将服务响应速度与极速的交易体验定位为特色之一，为此，
             我们简化前端开户流程，开发手机客户端开户，提升开户审核速率。
-            在注入提取交易资金方面，我们对接全球各大银行，保证世界各地客户均能快速的注入提取资金。
-            在交易体验方面，对接顶级流动性，全球架设服务器，将交易速率提升至毫秒级，为客户带来极速的交易体验！
+            在注入提取交易资金方面，我们对接全球各大银行，
+            保证世界各地客户均能快速的注入提取资金。
+            在交易体验方面，对接顶级流动性，全球架设服务器，
+            将交易速率提升至毫秒级，为客户带来极速的交易体验！
           </p>
         </div>
       </div>
-      <div class="global_right">
-        <div class="global_right_content">
+      <div class="global-item right">
+        <img src="images/icon/adv_icon_glo.png" alt="">
+        <div class="content">
           <h3>一个账户,随时随地,交易全球</h3>
           <p>我们为您精心筛选出了市场流动性最强，交投最为活跃，
             最受欢迎的外汇，黄金、白银、原油、股票指数等超过47交易品种，
@@ -126,84 +134,113 @@
     </div>
   </div>
   <!--交易-->
-  <div class="home_deal">
+  <div class="home-deal">
     <div class="container">
-      <div class="deal_item">
-        <div class="deal_item_img"></div>
-        <div class="deal_item_content">
-          <h3>交易简单而灵活</h3>
-          <p>多空双向交易，每个交易品种均可买多，卖空。
-            T+0即时买卖，建仓平仓均无任何限制。</p>
+      <div class="deal">
+        <div class="deal-item">
+          <div class="deal-item_img"></div>
+          <img src="images/icon/icon_easy.png" alt="">
+          <div class="deal-item_content">
+            <h3>交易简单而灵活</h3>
+            <p>多空双向交易，每个交易品种均可买多，卖空。
+              T+0即时买卖，建仓平仓均无任何限制。</p>
+          </div>
         </div>
-      </div>
-      <div class="deal_item">
-        <div class="deal_item_img"></div>
-        <div class="deal_item_content">
-          <h3>充足的交易时间</h3>
-          <p>不同于股票有休市制度，外汇、黄金、原油均为
-            全球性场外交易市场，全天候5×24小时无休市。</p>
+        <div class="deal-item">
+          <img src="images/icon/icon_time.png" alt="">
+          <div class="deal-item_content">
+            <h3>充足的交易时间</h3>
+            <p>不同于股票有休市制度，外汇、黄金、原油均为
+              全球性场外交易市场，全天候5×24小时无休市。</p>
+          </div>
         </div>
-      </div>
-      <div class="deal_item">
-        <div class="deal_item_img"></div>
-        <div class="deal_item_content">
-          <h3>交易利润无上限</h3>
-          <p>外汇、黄金、原油等交易品种均无涨跌停及熔断限制，
-            当交易方向正确时，利润可能无上限。</p>
+        <div class="deal-item">
+          <img src="images/icon/icon_infinite.png" alt="">
+          <div class="deal-item_content">
+            <h3>交易利润无上限</h3>
+            <p>外汇、黄金、原油等交易品种均无涨跌停及熔断限制，
+              当交易方向正确时，利润可能无上限。</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
   <!--数字数据-->
-  <div class="home_numberdata">
+  <div class="home-ddn">
     <div class="container">
-      <div class="numberdata_item">
-        <span>22</span>
-        <p>超过22家顶级银行及流动性提供商</p>
-      </div>
-      <div class="numberdata_item">
-        <span>50</span>
-        <p>最快50毫秒的极速订单成交速度</p>
-      </div>
-      <div class="numberdata_item">
-        <span>47</span>
-        <p>超过47个全球最活跃的主流交易品种</p>
-      </div>
-      <div class="numberdata_item">
-        <span>500</span>
-        <p>最高500倍保证金杠杆比例可供选择</p>
+      <div class="ddn">
+        <div class="ddn-item">
+          <span>22</span>
+          <p>超过22家顶级银行及流动性提供商</p>
+        </div>
+        <div class="ddn-item">
+          <span>50</span>
+          <p>最快50毫秒的极速订单成交速度</p>
+        </div>
+        <div class="ddn-item">
+          <span>47</span>
+          <p>超过47个全球最活跃的主流交易品种</p>
+        </div>
+        <div class="ddn-item">
+          <span>500</span>
+          <p>最高500倍保证金杠杆比例可供选择</p>
+        </div>
       </div>
     </div>
   </div>
   <!--品种-->
-  <div class="home_variety">
+  <div class="home-variety">
     <div class="container">
-      <div class="variety_item left_column">
-        <div class="variety_forex_container">
-          <div class="variety_forex_content">
-            <h3>外汇</h3>
-            <p>外汇市场是全球最庞大的金融衍生品市场，每天全球成交超过5万亿美元，
-              PTT平台提供主流直盘、交叉盘多达30种以上，24小时不间断交易。
-            </p>
+      <div class="variety">
+        <div class="left">
+          <div class="left-item">
+            <img src="images/img/img_trade_forex.png" alt="">
+            <div class="content">
+              <div class="detail">
+                <h3>外汇</h3>
+                <p>外汇市场是全球最庞大的金融衍生品市场，每天全球成交超过5万亿美元，
+                  PTT平台提供主流直盘、交叉盘多达30种以上，24小时不间断交易。
+                </p>
+              </div>
+              <a href="" target="_blank" class="more">查看更多</a>
+            </div>
+            <!--<div class="variety_fx_container">-->
+              <!--<div class="variety_fx_content">-->
+                <!--<h3>外汇</h3>-->
+                <!--<p>外汇市场是全球最庞大的金融衍生品市场，每天全球成交超过5万亿美元，-->
+                  <!--PTT平台提供主流直盘、交叉盘多达30种以上，24小时不间断交易。-->
+                <!--</p>-->
+              <!--</div>-->
+              <!--<div class="variety_fx_more">查看更多</div>-->
+            <!--</div>-->
+            <!--<div class="variety_oil">原油</div>-->
           </div>
-          <div class="variety_forex_more">查看更多</div>
+          <div class="left-item">
+            <img src="images/img/img_trade_gold.png" alt="">
+            <div class="text">金属</div>
+          </div>
+          <div class="left-item">
+            <img src="images/img/img_trade_oil.png" alt="">
+            <div class="text">原油</div>
+          </div>
+          <div class="left-item">
+            <img src="images/img/img_trade_cfd.png" alt="">
+            <div class="text">股指</div>
+          </div>
         </div>
-        <div class="variety_oil">原油</div>
-      </div>
-      <div class="variety_item middle_column">
-        <div class="variety_metal">金属</div>
-        <div class="variety_sensex">股指</div>
-      </div>
-      <div class="variety_item right_column">
-        <div class="variety_many">
-          <h3>丰富齐全的交易品种</h3>
-          <p>涵盖全球4大最活跃的交易品种</p>
+
+        <div class="right">
+          <div class="variety_many">
+            <h3>丰富齐全的交易品种</h3>
+            <p>涵盖全球4大最活跃的交易品种</p>
+          </div>
         </div>
       </div>
+
     </div>
   </div>
   <!--平台-->
-  <div class="home_platform">
+  <div class="home-platform">
     <div class="container">
       <div class="platform_img"></div>
       <div class="platform_mt5_container">
@@ -216,31 +253,31 @@
             广受国际投资机构和投资者的青睐，超过70%的经纪公司和来自
             全世界30多个国家的经纪商和银行选择了MT5交易软件作为网络交易平台，全球超过90%的零售交易量是通过MT5平台成交的。</p>
         </div>
-        <div class="platform_app">
-          <div class="app_download app_iOS">
-            <div class="download_item">
-              <div class="btn_container">
-                <div class="item_icon iOS_icon"></div>
-                <span>iOS下载</span>
-              </div>
+        <div class="app">
+          <div class="app-item active">
+            <div class="detail">
+              <i class="icon"></i>
+              <span>iOS下载</span>
             </div>
-            <div class="QRcode">iOS二维码</div>
-          </div>
-          <div class="app_download app_Android">
-            <div class="download_item">
-              <div class="btn_container">
-                <div class="item_icon Android_icon"></div>
-                <span>Android</span>
-              </div>
+
+            <div class="QRcode">
+              <img src="" alt="iOS二维码">
             </div>
-            <div class="QRcode">Android二维码</div>
           </div>
-          <div class="app_download app_windows">
-            <div class="download_item">
-              <div class="btn_container">
-                <div class="item_icon windows_icon"></div>
-                <span>Windows</span>
-              </div>
+          <div class="app-item">
+            <div class="detail">
+              <i class="icon"></i>
+              <span>Android</span>
+            </div>
+
+            <div class="QRcode">
+              <img src="" alt="Android二维码">
+            </div>
+          </div>
+          <div class="app-item">
+            <div class="detail">
+              <i class="icon"></i>
+              <span>Windows</span>
             </div>
           </div>
         </div>
@@ -265,25 +302,25 @@
           </p>
         </div>
         <div class="footer_help">
-          <a href="./client-help.html">客户帮助</a>
-          <a href="./client-help.html">常见问题</a>
-          <a href="./client-help.html">注资出金</a>
-          <a href="./client-help.html">软件使用</a>
-          <a href="./client-help.html">交易相关</a>
-          <a href="./client-help.html">账户问题</a>
+          <a href="client-help.html">客户帮助</a>
+          <a href="client-help.html">常见问题</a>
+          <a href="client-help.html">注资出金</a>
+          <a href="client-help.html">软件使用</a>
+          <a href="client-help.html">交易相关</a>
+          <a href="client-help.html">账户问题</a>
         </div>
         <div class="footer_account">
-          <a href="./risk-warning.html">开设账户</a>
-          <a href="./risk-warning.html">风险警示</a>
-          <a href="./risk-warning.html">MT5下载</a>
-          <a href="./risk-warning.html">交易品种</a>
+          <a href="risk-warning.html">开设账户</a>
+          <a href="risk-warning.html">风险警示</a>
+          <a href="risk-warning.html">MT5下载</a>
+          <a href="risk-warning.html">交易品种</a>
         </div>
         <div class="footer_about_us">
-          <a href="./about-us.html">关于我们</a>
-          <a href="./about-us.html">公司介绍</a>
-          <a href="./about-us.html">合作伙伴</a>
-          <a href="./about-us.html">免责声明</a>
-          <a href="./about-us.html">联系我们</a>
+          <a href="about-us.html">关于我们</a>
+          <a href="about-us.html">公司介绍</a>
+          <a href="about-us.html">合作伙伴</a>
+          <a href="about-us.html">免责声明</a>
+          <a href="about-us.html">联系我们</a>
         </div>
       </div>
     </div>
@@ -306,6 +343,6 @@
   </div>
 </div>
 
-<script src="./js/built.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>

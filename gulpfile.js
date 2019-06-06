@@ -31,9 +31,9 @@ gulp.task('minifyjs', function () {
         .pipe($.babel({ // 语法转换 es6->es5
             presets: ['es2015']
         }))
-        .pipe(gulp.dest('build/js'))// 将gulp内存中的数据流输出指定目录下
-        .pipe($.concat('built.js'))
-        .pipe(gulp.dest('./build/js'))
+        // .pipe(gulp.dest('build/js'))// 将gulp内存中的数据流输出指定目录下
+        // .pipe($.concat('built.js'))
+        // .pipe(gulp.dest('./build/js'))
         // .pipe($.uglify())  // 压缩js代码
         // .pipe($.rename('dist.min.js')) // 重命名js文件
         .pipe(gulp.dest('./dist/js'))
@@ -72,14 +72,14 @@ gulp.task('watch', ['default'], function () {
         livereload: true,
         // port: 4000,
 
-        host: '192.168.3.68', // 公司ip地址
-        // host: '192.168.1.152',
+        host: '192.168.30.76', // 公司ip
+        // host: '192.168.1.152', // 公司ip
         port: 5000,
     });
     // 打开网页
     // open("http://localhost:4000");
-    open("http://192.168.3.68:5000");
-    // open("http://192.168.1.152:5000");
+    open("http://192.168.30.76:5000"); // 公司ip
+    // open("http://192.168.1.152:5000"); // 公司ip
     // 配置监视任务
     gulp.watch('./src/js/*.js', ['minifyjs']);
     gulp.watch('./src/less/*.less', ['minifycss']);

@@ -1,22 +1,51 @@
 ## `ptt`官网
 
-### `day01`
+- 要兼容到`IE9`
+- 在`IE8`上显示正常
 
-- 完成头部导航条
+### `sass` 和 `less` 继承类的不同
 
-## day02
+- `sass` 用的是`extand`
 
-### 锚点
+  ```js
+  %clearfix {
+    zoom: 1;
+    &:after {
+      clear: both;
+    }
+    &:before,
+    &:after {
+      content: "";
+      display: table;
+    }
+  }
+  
+  .container {
+      @extend %clearfix;
+  }
+  ```
 
-- 点击头部的`banner_arrows`
-- 特色区域就会瞬间置顶
+- `less` 用的是类似于函数
 
-### 头部导航
+  ```js
+  .clearfix() {
+    zoom: 1;
+    &:after {
+      clear: both;
+    }
+    &:before,
+    &:after {
+      content: "";
+      display: table;
+    }
+  }
+  
+  .container {
+  	.clearfix();
+  }
+  ```
 
-- 有点击的`bug`
+### 问题
 
-## `day03`
-
-- 页面基本完成
-- 自定义滚动条还没弄好
+- 平台 的 `app` 切换是 图标有问题
 
