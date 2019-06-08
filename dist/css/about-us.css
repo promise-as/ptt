@@ -5,24 +5,6 @@
   margin-left: auto;
   margin-right: auto;
 }
-/*自定义滚动条*/
-.about_warp {
-  position: relative;
-  height: 100%;
-  overflow-y: auto;
-  z-index: 300;
-  /*定义滚动条轨道 内阴影+圆角*/
-  /*定义滑块 内阴影+圆角*/
-}
-.about_warp::-webkit-scrollbar {
-  width: 16px;
-}
-.about_warp::-webkit-scrollbar-track {
-  background-color: #f1f1f1;
-}
-.about_warp::-webkit-scrollbar-thumb {
-  background-color: #999999;
-}
 /*关于我们*/
 .about_warp {
   /*头部*/
@@ -37,49 +19,49 @@
   /*导航条*/
   /*banner*/
 }
-.about_warp .about_header .nav_bar {
+.about_warp .about_header .nav-bar {
   width: 100%;
   height: 60px;
-  background-color: #0E48B4;
   position: fixed;
   top: 0;
   z-index: 200;
   -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
-.about_warp .about_header .nav_bar .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.about_warp .about_header .nav-bar .container {
+  zoom: 1;
 }
-.about_warp .about_header .nav_bar .container .logo > a {
+.about_warp .about_header .nav-bar .container:after {
+  clear: both;
+}
+.about_warp .about_header .nav-bar .container:before,
+.about_warp .about_header .nav-bar .container:after {
+  content: "";
+  display: table;
+}
+.about_warp .about_header .nav-bar .container .logo {
+  float: left;
+}
+.about_warp .about_header .nav-bar .container .logo a {
   width: 118px;
   height: 24px;
   margin-top: 18px;
-  background: url("../images/logo/home_footer_logo.png") no-repeat;
-  text-indent: -9999px;
 }
-.about_warp .about_header .nav_bar .container .nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.about_warp .about_header .nav-bar .container .nav {
+  float: right;
+  margin-right: -35px;
 }
-.about_warp .about_header .nav_bar .container .nav > a {
+.about_warp .about_header .nav-bar .container .nav a {
   height: 60px;
+  float: left;
 }
-.about_warp .about_header .nav_bar .container .nav > a > span {
+.about_warp .about_header .nav-bar .container .nav a span {
   color: white;
   display: block;
   padding: 0 35px;
   line-height: 60px;
 }
-.about_warp .about_header .nav_bar .container .nav > a > span.active {
-  color: #FFD24C;
-}
-.about_warp .about_header .nav_bar .container .nav > a > em {
+.about_warp .about_header .nav-bar .container .nav a em {
   display: none;
   width: 6px;
   height: 6px;
@@ -91,14 +73,17 @@
   right: 0;
   margin: auto;
 }
-.about_warp .about_header .nav_bar .container .nav > a > em.active {
+.about_warp .about_header .nav-bar .container .nav a.active span {
+  color: #FFD24C;
+}
+.about_warp .about_header .nav-bar .container .nav a.active em {
   display: block;
   background-color: #FFD24C;
 }
-.about_warp .about_header .nav_bar .container .nav > a:hover > span {
+.about_warp .about_header .nav-bar .container .nav a:hover span {
   color: #FFD24C;
 }
-.about_warp .about_header .nav_bar .container .nav > a:hover > em {
+.about_warp .about_header .nav-bar .container .nav a:hover em {
   display: block;
   background-color: #FFD24C;
 }
