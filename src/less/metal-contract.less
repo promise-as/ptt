@@ -8,319 +8,300 @@
   //border: 1px solid pink;
 }
 
-/*自定义滚动条*/
-.metal_warp{
-  position: relative;
-  height: 100%;
-  overflow-y: auto;
-  z-index: 300;
-  &::-webkit-scrollbar {
-    width: 16px;
-    //z-index: 300;
+.clearfix() {
+  zoom: 1;
+  &:after {
+    clear: both;
   }
-  /*定义滚动条轨道 内阴影+圆角*/
-  &::-webkit-scrollbar-track
-  {
-    background-color: #f1f1f1;
-  }
-  /*定义滑块 内阴影+圆角*/
-  &::-webkit-scrollbar-thumb
-  {
-    background-color: #999999;
+  &:before,
+  &:after {
+    content: "";
+    display: table;
   }
 }
 
-/*金属合约*/
-.metal_warp{
-  /*头部*/
-  .metal_header{
-    background: url("../images/bg/bg_gold.jpg") no-repeat;
-    /*导航条*/
-    .nav_bar {
-      width: 100%;
-      height: 60px;
-      position: fixed;
-      top: 0;
-      //left: 0;
-      z-index: 200;
-      background-color: #0E48B4;
-      box-shadow: 0 2px 2px rgba(0,0,0,.2);
-      .container {
-        display: flex;
-        justify-content: space-between;
-        .logo {
-          > a {
-            width: 118px;
-            height: 24px;
-            //border: 1px solid pink;
-            margin-top: 18px;
-            background: url("../images/logo/home_footer_logo.png") no-repeat;
-            text-indent: -9999px;
-          }
-        }
-        .nav {
-          //border: 1px solid red;
-          display: flex;
-          > a {
-            //border: 1px solid blue;
-            height: 60px;
-            > span {
-              color: white;
-              display: block;
-              padding: 0 35px;
-              line-height: 60px;
-              &.active {
-                color: #FFD24C;
-              }
-            }
-            > em {
-              display: none;
-              width: 6px;
-              height: 6px;
-              border-radius: 50%;
-              background-color: white;
-              position: relative;
-              top: -16px;
-              left: 0;
-              right: 0;
-              margin: auto;
-              &.active {
-                display: block;
-                background-color: #FFD24C;
-              }
-            }
-            &:hover {
-              > span {
-                color: #FFD24C;
-              }
-              > em {
-                display: block;
-                background-color: #FFD24C;
-              }
-            }
-          }
+/*头部*/
+.metal_header{
+  background: url("../images/bg/bg_gold.jpg") no-repeat;
+  /*导航条*/
+  .nav-bar {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    //left: 0;
+    z-index: 200;
+    box-shadow: 0 2px 2px rgba(0,0,0,.2);
+    .container {
+      .clearfix();
+      .logo {
+        float: left;
+        a {
+          width: 118px;
+          height: 24px;
+          //border: 1px solid pink;
+          margin-top: 18px;
         }
       }
-    }
-    /*banner*/
-    .variety_banner{
-      width: 100%;
-      margin-top: 60px;
-      .container{
-        height: 418px;
+      .nav {
+        float: right;
+        margin-right: -35px;
+        a {
+          //border: 1px solid blue;
+          height: 60px;
+          float: left;
+          span {
+            color: white;
+            display: block;
+            padding: 0 35px;
+            line-height: 60px;
+          }
+          em {
+            display: none;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: white;
+            position: relative;
+            top: -16px;
+            left: 0;
+            right: 0;
+            margin: auto;
+          }
+          &.active {
+            span {
+              color: #FFD24C;
+            }
+            em {
+              display: block;
+              background-color: #FFD24C;
+            }
+          }
+          &:hover {
+            span {
+              color: #FFD24C;
+            }
+            em {
+              display: block;
+              background-color: #FFD24C;
+            }
+          }
+        }
       }
     }
   }
-  /*主体*/
-  .metal_main{
+  /*banner*/
+  .variety_banner{
     .container{
-      //height: 1055px;
-      //border: 1px solid #000;
-      .main_card{
-        //height: 720px;
-        margin-top: -166px;
-        background-color: white;
-        box-shadow:0px 3px 26px 2px rgba(14,72,180,0.08);
-        border-radius:4px;
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        text-align: center;
-        .main_card_logo{
-          width: 200px;
-          height: 200px;
-          background: url("../images/icon/platform_icon_gold.png") no-repeat #0E48B4 center;
-          border-radius: 50%;
-          margin-top: 100px;
+      height: 418px;
+    }
+  }
+}
+/*主体*/
+.metal_main{
+  .container{
+    //height: 1055px;
+    //border: 1px solid #000;
+    .main_card{
+      //height: 720px;
+      margin-top: -166px;
+      background-color: white;
+      box-shadow:0 3px 26px 2px rgba(14,72,180,0.08);
+      border-radius:4px;
+      padding: 100px 100px 80px;
+      box-sizing: border-box;
+      text-align: center;
+      .main_card_logo{
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        background: url("../images/icon/platform_icon_gold.png") no-repeat #0E48B4 center;
+        border-radius: 50%;
+      }
+      .main_card_title{
+        margin-top: 40px;
+        h2{
+          font-size: 30px;
+          color: #0E48B4;
         }
-        .main_card_title{
-          margin-top: 40px;
-          > h2{
-            font-size: 30px;
-            color: #0E48B4;
-          }
-          > span{
-            font-size: 14px;
-            color: #505050;
-            line-height: 24px;
-          }
-        }
-        .main_card_detail{
-          width: 1000px;
+        span{
           font-size: 14px;
           color: #505050;
           line-height: 24px;
-          text-align: left;
-          margin-bottom: 88px;
-          > p{
-            margin-top: 57px;
+        }
+      }
+      .main_card_detail{
+        width: 1000px;
+        font-size: 14px;
+        color: #505050;
+        line-height: 24px;
+        text-align: left;
+        p{
+          margin-top: 57px;
+        }
+      }
+    }
+    .main_product{
+      .product_tab{
+        display: flex;
+        margin-top: 100px;
+        .product_column{
+          text-align: center;
+          line-height: 60px;
+          .product_name{
+            background-color: #0E48B4;
+            color: white;
+          }
+          &:first-child{
+            width: 164px;
+            .product_gold{
+              border-left: 1px solid #E6E6E6;
+            }
+            .product_silver{
+              border-left: 1px solid #E6E6E6;
+            }
+          }
+          &:nth-child(2){
+            width: 164px;
+          }
+          &:nth-child(3){
+            //flex: 1;
+            width: 437px;
+          }
+          &:last-child{
+            //width: 433px;
+            flex: 1;
+            .product_name{
+              border-right: 1px solid #0E48B4;
+            }
+            .product_time{
+              height: 121px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: #505050;
+              .time_container{
+                width: 313px;
+                height: 61px;
+                //border: 1px solid red;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-between;
+                text-align: left;
+                font-size: 14px;
+                line-height: 24px;
+                margin-top: -8px;
+              }
+            }
+          }
+          > div{
+            height: 60px;
+            //border: 1px solid #000;
+            border-right: 1px solid #E6E6E6;
+            border-bottom: 1px solid #E6E6E6;
+            background-color: white;
+          }
+          .product_gold{
+            color: #505050;
+          }
+          .product_silver{
+            color: #505050;
           }
         }
       }
-      .main_product{
-        .product_tab{
-          display: flex;
-          margin-top: 100px;
-          .product_column{
-            text-align: center;
-            line-height: 60px;
-            .product_name{
-              background-color: #0E48B4;
-              color: white;
-            }
-            &:first-child{
-              width: 164px;
-              .product_gold{
-                border-left: 1px solid #E6E6E6;
-              }
-              .product_silver{
-                border-left: 1px solid #E6E6E6;
-              }
-            }
-            &:nth-child(2){
-              width: 164px;
-            }
-            &:nth-child(3){
-              //flex: 1;
-              width: 437px;
-            }
-            &:last-child{
-              //width: 433px;
-              flex: 1;
-              .product_name{
-                border-right: 1px solid #0E48B4;
-              }
-              .product_time{
-                height: 121px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: #505050;
-                .time_container{
-                  width: 313px;
-                  height: 61px;
-                  //border: 1px solid red;
-                  display: flex;
-                  flex-flow: column nowrap;
-                  justify-content: space-between;
-                  text-align: left;
-                  font-size: 14px;
-                  line-height: 24px;
-                  margin-top: -8px;
-                }
-              }
-            }
-            > div{
-              height: 60px;
-              //border: 1px solid #000;
-              border-right: 1px solid #E6E6E6;
-              border-bottom: 1px solid #E6E6E6;
-              background-color: white;
-            }
-            .product_gold{
-              color: #505050;
-            }
-            .product_silver{
-              color: #505050;
-            }
-          }
-        }
-        .product_explain{
-          height: 56px;
-          background-color: #F2F1EF;
-          text-align: center;
-          line-height: 56px;
-          font-size: 14px;
-          color: #FF1818;
-          margin-bottom: 150px;
-        }
+      .product_explain{
+        height: 56px;
+        background-color: #F2F1EF;
+        text-align: center;
+        line-height: 56px;
+        font-size: 14px;
+        color: #FF1818;
+        margin-bottom: 150px;
       }
     }
   }
-  /*底部*/
-  .footer {
-    width: 100%;
-    //height: 412px;
-    background: #0E48B4;
-    .container {
-      //height: 214px;
-      //border: 1px solid #000;
-      .footer_main {
-        display: flex;
-        justify-content: space-between;
-        padding-top: 50px;
-        margin-bottom: 30px;
-        > div {
-          font-size: 14px;
-          line-height: 24px;
-          > a {
-            color: #B9D2EB;
-            white-space: nowrap;
-            &:first-child {
-              color: white;
-            }
-            &:hover {
-              color: white;
-            }
-          }
-          > p {
-            color: #B9D2EB;
-          }
-        }
-        .footer_logo {
-          > a {
-            width: 118px;
-            height: 24px;
-            //border: 1px solid pink;
-            //margin-top: 18px;
-            background: url("../images/logo/home_footer_logo.png") no-repeat;
-            text-indent: -9999px;
-          }
-        }
-        .footer_risk {
-          width: 550px;
-          height: 135px;
-        }
-        .footer_help {
-          width: 56px;
-          height: 134px;
-        }
-        .footer_account {
-          width: 57px;
-          height: 86px;
-        }
-        .footer_about_us {
-          width: 56px;
-          height: 110px;
-        }
-      }
-      .footer_policy {
-        //border: 1px solid white;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        font-size: 14px;
-        line-height: 24px;
-        > h3 {
+}
+/*底部*/
+.footer {
+  width: 100%;
+  background: #0E48B4;
+  .container {
+    //border: 1px solid #000;
+    .footer_main {
+      padding-top: 50px;
+      margin-bottom: 30px;
+      font-size: 14px;
+      line-height: 24px;
+      .clearfix();
+      a {
+        color: #B9D2EB;
+        white-space: nowrap;
+        &:first-child {
           color: white;
         }
-        > p {
-          color: #B9D2EB;
+        &:hover {
+          color: white;
         }
       }
-      .footer_address {
-        font-style: normal;
+      p {
         color: #B9D2EB;
-        p {
-          text-align: center;
-          height: 74px;
-          line-height: 74px;
+      }
+      .footer_logo {
+        float: left;
+        a {
+          width: 118px;
+          height: 24px;
+          //border: 1px solid pink;
+          background: url("../images/logo/home_footer_logo.png") no-repeat;
+          text-indent: -9999px;
         }
       }
+      .footer_risk {
+        width: 505px;
+        float: left;
+        margin-left: 100px;
+      }
+      .footer_help {
+        width: 56px;
+        float: left;
+        margin-left: 100px;
+      }
+      .footer_account {
+        width: 57px;
+        float: left;
+        margin-left: 100px;
+      }
+      .footer_about_us {
+        width: 56px;
+        float: right;
+      }
     }
-    .footer_line {
-      width: 100%;
-      height: 1px;
-      background: rgba(0, 93, 184, 1);
+    .footer_policy {
+      //border: 1px solid white;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      font-size: 14px;
+      line-height: 24px;
+      h3 {
+        color: white;
+      }
+      p {
+        color: #B9D2EB;
+      }
     }
+    .footer_address {
+      font-style: normal;
+      color: #B9D2EB;
+      p {
+        text-align: center;
+        height: 74px;
+        line-height: 74px;
+      }
+    }
+  }
+  .footer_line {
+    width: 100%;
+    height: 1px;
+    background: rgba(0, 93, 184, 1);
   }
 }

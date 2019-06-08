@@ -5,21 +5,13 @@
   margin-left: auto;
   margin-right: auto;
 }
-/*关于我们*/
-.about_warp {
-  /*头部*/
-  /*主体*/
-  /*服务*/
-  /*我们的优势*/
-  /*注册*/
-  /*底部*/
-}
-.about_warp .about_header {
+/*头部*/
+.about_header {
   background: url("../images/bg/bg_about.jpg") no-repeat;
   /*导航条*/
   /*banner*/
 }
-.about_warp .about_header .nav-bar {
+.about_header .nav-bar {
   width: 100%;
   height: 60px;
   position: fixed;
@@ -28,40 +20,40 @@
   -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
-.about_warp .about_header .nav-bar .container {
+.about_header .nav-bar .container {
   zoom: 1;
 }
-.about_warp .about_header .nav-bar .container:after {
+.about_header .nav-bar .container:after {
   clear: both;
 }
-.about_warp .about_header .nav-bar .container:before,
-.about_warp .about_header .nav-bar .container:after {
+.about_header .nav-bar .container:before,
+.about_header .nav-bar .container:after {
   content: "";
   display: table;
 }
-.about_warp .about_header .nav-bar .container .logo {
+.about_header .nav-bar .container .logo {
   float: left;
 }
-.about_warp .about_header .nav-bar .container .logo a {
+.about_header .nav-bar .container .logo a {
   width: 118px;
   height: 24px;
   margin-top: 18px;
 }
-.about_warp .about_header .nav-bar .container .nav {
+.about_header .nav-bar .container .nav {
   float: right;
   margin-right: -35px;
 }
-.about_warp .about_header .nav-bar .container .nav a {
+.about_header .nav-bar .container .nav a {
   height: 60px;
   float: left;
 }
-.about_warp .about_header .nav-bar .container .nav a span {
+.about_header .nav-bar .container .nav a span {
   color: white;
   display: block;
   padding: 0 35px;
   line-height: 60px;
 }
-.about_warp .about_header .nav-bar .container .nav a em {
+.about_header .nav-bar .container .nav a em {
   display: none;
   width: 6px;
   height: 6px;
@@ -73,485 +65,412 @@
   right: 0;
   margin: auto;
 }
-.about_warp .about_header .nav-bar .container .nav a.active span {
+.about_header .nav-bar .container .nav a.active span {
   color: #FFD24C;
 }
-.about_warp .about_header .nav-bar .container .nav a.active em {
+.about_header .nav-bar .container .nav a.active em {
   display: block;
   background-color: #FFD24C;
 }
-.about_warp .about_header .nav-bar .container .nav a:hover span {
+.about_header .nav-bar .container .nav a:hover span {
   color: #FFD24C;
 }
-.about_warp .about_header .nav-bar .container .nav a:hover em {
+.about_header .nav-bar .container .nav a:hover em {
   display: block;
   background-color: #FFD24C;
 }
-.about_warp .about_header .variety_banner {
-  width: 100%;
-  margin-top: 60px;
-}
-.about_warp .about_header .variety_banner .container {
+.about_header .variety_banner .container {
   height: 418px;
 }
-.about_warp .about_main .container .main_card {
+/*主体*/
+.about_main .container .main_card {
   margin-top: -166px;
   background-color: white;
-  -webkit-box-shadow: 0px 3px 26px 2px rgba(14, 72, 180, 0.08);
-          box-shadow: 0px 3px 26px 2px rgba(14, 72, 180, 0.08);
+  -webkit-box-shadow: 0 3px 26px 2px rgba(14, 72, 180, 0.08);
+          box-shadow: 0 3px 26px 2px rgba(14, 72, 180, 0.08);
   border-radius: 4px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding: 80px 103px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   text-align: center;
 }
-.about_warp .about_main .container .main_card .main_card_logo {
-  width: 131px;
-  height: 131px;
-  background: url("../images/bmp/ptt.bmp") no-repeat #0E48B4 center;
-  margin-top: 100px;
+.about_main .container .main_card img {
+  display: inline-block;
 }
-.about_warp .about_main .container .main_card .main_card_detail {
+.about_main .container .main_card .main_card_detail {
   width: 1000px;
   font-size: 14px;
   color: #505050;
   line-height: 24px;
   text-align: center;
-  margin-bottom: 88px;
 }
-.about_warp .about_main .container .main_card .main_card_detail > p {
+.about_main .container .main_card .main_card_detail p {
   margin-top: 57px;
 }
-.about_warp .about_serve .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+/*服务*/
+.about_serve .container {
+  zoom: 1;
+  margin-bottom: 150px;
 }
-.about_warp .about_serve .container .serve_item {
+.about_serve .container:after {
+  clear: both;
+}
+.about_serve .container:before,
+.about_serve .container:after {
+  content: "";
+  display: table;
+}
+.about_serve .container .serve_item {
   width: 350px;
   height: 400px;
+  float: left;
   background-color: #F2F1EF;
   margin-top: 150px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding: 91px 56px 81px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   cursor: pointer;
   border-radius: 4px;
+  text-align: center;
 }
-.about_warp .about_serve .container .serve_item .serve_content {
-  width: 238px;
-  height: 228px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.about_warp .about_serve .container .serve_item .serve_content .content_icon {
+.about_serve .container .serve_item .content_icon {
+  display: inline-block;
   width: 150px;
   height: 120px;
   background: url("../images/icon/about_icon_online.png") no-repeat;
 }
-.about_warp .about_serve .container .serve_item .serve_content .content_detail > h3 {
+.about_serve .container .serve_item .content_detail h3 {
   text-align: center;
   color: #000527;
   font-size: 24px;
   margin-bottom: 10px;
 }
-.about_warp .about_serve .container .serve_item .serve_content .content_detail > p {
+.about_serve .container .serve_item .content_detail p {
   text-align: center;
   font-size: 14px;
   color: #505050;
   line-height: 24px;
 }
-.about_warp .about_serve .container .serve_item:hover {
+.about_serve .container .serve_item:hover {
   background-color: #0E48B4;
 }
-.about_warp .about_serve .container .serve_item:hover .serve_content .content_detail > h3 {
+.about_serve .container .serve_item:hover .content_detail > h3 {
   color: white;
 }
-.about_warp .about_serve .container .serve_item:hover .serve_content .content_detail > p {
+.about_serve .container .serve_item:hover .content_detail > p {
   color: white;
 }
-.about_warp .about_serve .container .serve_online:hover .serve_content .content_icon {
+.about_serve .container .serve_online:hover .content_icon {
   background: url("../images/icon/about_icon_online_sel.png") no-repeat;
 }
-.about_warp .about_serve .container .serve_butt {
+.about_serve .container .serve_butt {
   width: 383px;
-  margin-bottom: 150px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  float: left;
+  margin: 0 58px;
 }
-.about_warp .about_serve .container .serve_butt .butt_finance {
+.about_serve .container .serve_butt .butt_finance {
   width: 383px;
   height: 52px;
   margin-top: 150px;
 }
-.about_warp .about_serve .container .serve_butt .butt_finance > h3 {
+.about_serve .container .serve_butt .butt_finance h3 {
   text-align: center;
   color: #000527;
   font-size: 24px;
   margin-bottom: 10px;
   white-space: nowrap;
 }
-.about_warp .about_serve .container .serve_butt .butt_finance > p {
+.about_serve .container .serve_butt .butt_finance p {
   text-align: center;
   font-size: 14px;
   color: #505050;
   line-height: 24px;
 }
-.about_warp .about_serve .container .serve_butt .butt_content {
+.about_serve .container .serve_butt .butt_content {
   width: 350px;
   height: 400px;
   background-color: #0E48B4;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding: 74px 56px 80px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border-radius: 4px;
   margin-top: 48px;
   margin-left: 16.5px;
   cursor: pointer;
 }
-.about_warp .about_serve .container .serve_butt .butt_content .content_detail {
-  width: 238px;
-  height: 228px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.about_serve .container .serve_butt .butt_content .content_detail {
+  text-align: center;
 }
-.about_warp .about_serve .container .serve_butt .butt_content .content_detail .detail_icon {
+.about_serve .container .serve_butt .butt_content .content_detail .detail_icon {
+  display: inline-block;
   width: 150px;
   height: 120px;
   background: url("../images/icon/about_icon_butt_sel.png") no-repeat;
 }
-.about_warp .about_serve .container .serve_butt .butt_content .content_detail .detail_text > h3 {
-  text-align: center;
+.about_serve .container .serve_butt .butt_content .content_detail .detail_text {
+  margin-top: 50px;
+}
+.about_serve .container .serve_butt .butt_content .content_detail .detail_text h3 {
   color: white;
   font-size: 24px;
   margin-bottom: 10px;
 }
-.about_warp .about_serve .container .serve_butt .butt_content .content_detail .detail_text > p {
-  text-align: center;
+.about_serve .container .serve_butt .butt_content .content_detail .detail_text p {
   font-size: 14px;
   color: white;
   line-height: 24px;
 }
-.about_warp .about_serve .container .serve_butt:hover .serve_content .content_icon {
+.about_serve .container .serve_butt:hover .serve_content .content_icon {
   background: url("../images/icon/about_icon_butt_sel.png") no-repeat;
 }
-.about_warp .about_serve .container .serve_consult .serve_content .content_icon {
+.about_serve .container .serve_consult .content_icon {
   background: url("../images/icon/about_icon_solute.png") no-repeat;
 }
-.about_warp .about_serve .container .serve_consult:hover .serve_content .content_icon {
+.about_serve .container .serve_consult:hover .content_icon {
   background: url("../images/icon/about_icon_solute_sel.png") no-repeat;
 }
-.about_warp .about_advantage {
+/*我们的优势*/
+.about_advantage {
   background: url("../images/bg/bg1.png") no-repeat #0E48B4;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  zoom: 1;
 }
-.about_warp .about_advantage .advantage_content {
-  width: 960px;
-  height: 750px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.about_advantage:after {
+  clear: both;
 }
-.about_warp .about_advantage .advantage_content .content_detail {
+.about_advantage:before,
+.about_advantage:after {
+  content: "";
+  display: table;
+}
+.about_advantage .advantage_content {
+  width: 50%;
+  float: left;
+  position: relative;
+  zoom: 1;
+}
+.about_advantage .advantage_content:after {
+  clear: both;
+}
+.about_advantage .advantage_content:before,
+.about_advantage .advantage_content:after {
+  content: "";
+  display: table;
+}
+.about_advantage .advantage_content .content_detail {
   width: 278px;
   height: 387px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
-.about_warp .about_advantage .advantage_content .content_detail .detail_title > h3 {
+.about_advantage .advantage_content .content_detail .detail_title h3 {
   font-size: 24px;
   line-height: 24px;
   color: white;
   margin-bottom: 10px;
 }
-.about_warp .about_advantage .advantage_content .content_detail .detail_title > p {
+.about_advantage .advantage_content .content_detail .detail_title p {
   font-size: 14px;
   color: white;
 }
-.about_warp .about_advantage .advantage_content .content_detail .detail_variety {
+.about_advantage .advantage_content .content_detail .detail_variety {
   margin-top: 75px;
   width: 278px;
   height: 260px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  color: #ffffff;
+  zoom: 1;
 }
-.about_warp .about_advantage .advantage_content .content_detail .detail_variety .variety_left {
+.about_advantage .advantage_content .content_detail .detail_variety:after {
+  clear: both;
+}
+.about_advantage .advantage_content .content_detail .detail_variety:before,
+.about_advantage .advantage_content .content_detail .detail_variety:after {
+  content: "";
+  display: table;
+}
+.about_advantage .advantage_content .content_detail .detail_variety .variety_left {
   width: 100px;
   height: 260px;
+  float: left;
 }
-.about_warp .about_advantage .advantage_content .content_detail .detail_variety .variety_left .left_item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.about_advantage .advantage_content .content_detail .detail_variety .variety_left .left_item {
   margin-top: 14px;
+  zoom: 1;
 }
-.about_warp .about_advantage .advantage_content .content_detail .detail_variety .variety_left .left_item .item_icon {
-  width: 20px;
-  height: 20px;
-  vertical-align: middle;
+.about_advantage .advantage_content .content_detail .detail_variety .variety_left .left_item:after {
+  clear: both;
 }
-.about_warp .about_advantage .advantage_content .content_detail .detail_variety .variety_left .left_item .item_text {
-  font-size: 14px;
-  color: white;
-  line-height: 22px;
+.about_advantage .advantage_content .content_detail .detail_variety .variety_left .left_item:before,
+.about_advantage .advantage_content .content_detail .detail_variety .variety_left .left_item:after {
+  content: "";
+  display: table;
 }
-.about_warp .about_advantage .advantage_content .content_detail .detail_variety .variety_left .left_item:nth-child(1) .item_icon {
-  background: url("../images/icon/icon_advantage_1.png") no-repeat;
-}
-.about_warp .about_advantage .advantage_content .content_detail .detail_variety .variety_left .left_item:nth-child(2) .item_icon {
-  background: url("../images/icon/icon_advantage_2.png") no-repeat;
-}
-.about_warp .about_advantage .advantage_content .content_detail .detail_variety .variety_left .left_item:nth-child(3) .item_icon {
-  background: url("../images/icon/icon_advantage_3.png") no-repeat;
-}
-.about_warp .about_advantage .advantage_content .content_detail .detail_variety .variety_left .left_item:nth-child(4) .item_icon {
-  background: url("../images/icon/icon_advantage_4.png") no-repeat;
-}
-.about_warp .about_advantage .advantage_content .content_detail .detail_variety .variety_left .left_item:nth-child(5) .item_icon {
-  background: url("../images/icon/icon_advantage_5.png") no-repeat;
-}
-.about_warp .about_advantage .advantage_content .content_detail .detail_variety .variety_left .left_item:nth-child(6) .item_icon {
-  background: url("../images/icon/icon_advantage_6.png") no-repeat;
-}
-.about_warp .about_advantage .advantage_content .content_detail .detail_variety .variety_left .left_item:nth-child(7) .item_icon {
-  background: url("../images/icon/icon_advantage_7.png") no-repeat;
-}
-.about_warp .about_advantage .advantage_content .content_detail .detail_variety .variety_right {
-  width: 120px;
-  height: 260px;
-}
-.about_warp .about_advantage .advantage_content .content_detail .detail_variety .variety_right .right_item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 14px;
-}
-.about_warp .about_advantage .advantage_content .content_detail .detail_variety .variety_right .right_item .item_icon {
-  width: 20px;
-  height: 20px;
+.about_advantage .advantage_content .content_detail .detail_variety .variety_left .left_item img {
+  float: left;
   margin-right: 10px;
 }
-.about_warp .about_advantage .advantage_content .content_detail .detail_variety .variety_right .right_item .item_text {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+.about_advantage .advantage_content .content_detail .detail_variety .variety_left .left_item .item_text {
   font-size: 14px;
   color: white;
-  line-height: 22px;
+  line-height: 20px;
+  float: left;
 }
-.about_warp .about_advantage .advantage_content .content_detail .detail_variety .variety_right .right_item:nth-child(1) .item_icon {
-  background: url("../images/icon/icon_advantage_8.png") no-repeat;
+.about_advantage .advantage_content .content_detail .detail_variety .variety_right {
+  width: 120px;
+  height: 260px;
+  float: right;
 }
-.about_warp .about_advantage .advantage_content .content_detail .detail_variety .variety_right .right_item:nth-child(2) .item_icon {
-  background: url("../images/icon/icon_advantage_9.png") no-repeat;
+.about_advantage .advantage_content .content_detail .detail_variety .variety_right .right_item {
+  margin-top: 14px;
+  zoom: 1;
 }
-.about_warp .about_advantage .advantage_content .content_detail .detail_variety .variety_right .right_item:nth-child(3) .item_icon {
-  background: url("../images/icon/icon_advantage_10.png") no-repeat;
+.about_advantage .advantage_content .content_detail .detail_variety .variety_right .right_item:after {
+  clear: both;
 }
-.about_warp .about_advantage .advantage_content .content_detail .detail_variety .variety_right .right_item:nth-child(4) .item_icon {
-  background: url("../images/icon/icon_advantage_11.png") no-repeat;
+.about_advantage .advantage_content .content_detail .detail_variety .variety_right .right_item:before,
+.about_advantage .advantage_content .content_detail .detail_variety .variety_right .right_item:after {
+  content: "";
+  display: table;
 }
-.about_warp .about_advantage .advantage_content .content_detail .detail_variety .variety_right .right_item:nth-child(5) .item_icon {
-  background: url("../images/icon/icon_advantage_12.png") no-repeat;
+.about_advantage .advantage_content .content_detail .detail_variety .variety_right .right_item img {
+  float: left;
+  margin-right: 10px;
 }
-.about_warp .about_advantage .advantage_content .content_detail .detail_variety .variety_right .right_item:nth-child(6) .item_icon {
-  background: url("../images/icon/icon_advantage_13.png") no-repeat;
+.about_advantage .advantage_content .content_detail .detail_variety .variety_right .right_item .item_text {
+  font-size: 14px;
+  color: white;
+  line-height: 20px;
+  float: left;
 }
-.about_warp .about_advantage .advantage_content .content_detail .detail_variety .variety_right .right_item:nth-child(7) .item_icon {
-  background: url("../images/icon/icon_advantage_14.png") no-repeat;
+.about_advantage .advantage_img {
+  width: 50%;
+  float: right;
 }
-.about_warp .about_advantage .advantage_img {
-  width: 960px;
-  height: 750px;
-  background: url("../images/img/img_adv.jpg") no-repeat;
+/*注册*/
+.about_register .container {
+  zoom: 1;
+  padding: 150px 0 152px;
 }
-.about_warp .about_register .container {
-  height: 400px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.about_register .container:after {
+  clear: both;
 }
-.about_warp .about_register .container .register_quality {
+.about_register .container:before,
+.about_register .container:after {
+  content: "";
+  display: table;
+}
+.about_register .container .register_quality {
+  float: left;
   width: 490px;
   height: 82px;
 }
-.about_warp .about_register .container .register_quality > h3 {
+.about_register .container .register_quality h3 {
   font-size: 24px;
   color: #000527;
   margin-bottom: 10px;
 }
-.about_warp .about_register .container .register_quality > p {
+.about_register .container .register_quality p {
   font-size: 14px;
   color: #505050;
   line-height: 24px;
 }
-.about_warp .about_register .container .register_btn {
+.about_register .container .register_btn {
+  float: right;
   width: 480px;
   height: 86px;
   background-color: #0E48B4;
   border-radius: 43px;
   font-size: 18px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  cursor: pointer;
   color: white;
+  text-align: center;
+  line-height: 86px;
 }
-.about_warp .footer {
+/*底部*/
+.footer {
   width: 100%;
   background: #0E48B4;
 }
-.about_warp .footer .container .footer_main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.footer .container .footer_main {
   padding-top: 50px;
   margin-bottom: 30px;
-}
-.about_warp .footer .container .footer_main > div {
   font-size: 14px;
   line-height: 24px;
+  zoom: 1;
 }
-.about_warp .footer .container .footer_main > div > a {
+.footer .container .footer_main:after {
+  clear: both;
+}
+.footer .container .footer_main:before,
+.footer .container .footer_main:after {
+  content: "";
+  display: table;
+}
+.footer .container .footer_main a {
   color: #B9D2EB;
   white-space: nowrap;
 }
-.about_warp .footer .container .footer_main > div > a:first-child {
+.footer .container .footer_main a:first-child {
   color: white;
 }
-.about_warp .footer .container .footer_main > div > a:hover {
+.footer .container .footer_main a:hover {
   color: white;
 }
-.about_warp .footer .container .footer_main > div > p {
+.footer .container .footer_main p {
   color: #B9D2EB;
 }
-.about_warp .footer .container .footer_main .footer_logo > a {
+.footer .container .footer_main .footer_logo {
+  float: left;
+}
+.footer .container .footer_main .footer_logo a {
   width: 118px;
   height: 24px;
   background: url("../images/logo/home_footer_logo.png") no-repeat;
   text-indent: -9999px;
 }
-.about_warp .footer .container .footer_main .footer_risk {
-  width: 550px;
-  height: 135px;
+.footer .container .footer_main .footer_risk {
+  width: 505px;
+  float: left;
+  margin-left: 100px;
 }
-.about_warp .footer .container .footer_main .footer_help {
+.footer .container .footer_main .footer_help {
   width: 56px;
-  height: 134px;
+  float: left;
+  margin-left: 100px;
 }
-.about_warp .footer .container .footer_main .footer_account {
+.footer .container .footer_main .footer_account {
   width: 57px;
-  height: 86px;
+  float: left;
+  margin-left: 100px;
 }
-.about_warp .footer .container .footer_main .footer_about_us {
+.footer .container .footer_main .footer_about_us {
   width: 56px;
-  height: 110px;
+  float: right;
 }
-.about_warp .footer .container .footer_policy {
+.footer .container .footer_policy {
   margin-top: 30px;
   margin-bottom: 30px;
   font-size: 14px;
   line-height: 24px;
 }
-.about_warp .footer .container .footer_policy > h3 {
+.footer .container .footer_policy h3 {
   color: white;
 }
-.about_warp .footer .container .footer_policy > p {
+.footer .container .footer_policy p {
   color: #B9D2EB;
 }
-.about_warp .footer .container .footer_address {
+.footer .container .footer_address {
   font-style: normal;
   color: #B9D2EB;
 }
-.about_warp .footer .container .footer_address p {
+.footer .container .footer_address p {
   text-align: center;
   height: 74px;
   line-height: 74px;
 }
-.about_warp .footer .footer_line {
+.footer .footer_line {
   width: 100%;
   height: 1px;
   background: #005db8;
