@@ -73,13 +73,13 @@ gulp.task('watch', ['default'], function () {
         // port: 4000,
 
         // host: '192.168.30.76', // 公司ip
-        host: '192.168.0.104', // 公司ip
+        host: '192.168.0.105', // 宿舍ip
         port: 5000,
     });
     // 打开网页
     // open("http://localhost:4000");
     // open("http://192.168.30.76:5000"); // 公司ip
-    open("http://192.168.0.104:5000"); // 公司ip
+    open("http://192.168.0.105:5000"); // 宿舍ip
     // 配置监视任务
     gulp.watch('./src/js/*.js', ['minifyjs']);
     gulp.watch('./src/less/*.less', ['minifycss']);

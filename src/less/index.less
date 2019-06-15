@@ -1,3 +1,5 @@
+@txt-color: #FFD24C;
+@bg-color: #0E48B4;
 /*容器宽度*/
 .container {
   width: 1200px;
@@ -7,7 +9,7 @@
 }
 
 body{
-  overflow-x: hidden; /*始终不显示x方向的滚动条*/
+  overflow: hidden;
 }
 
 .clearfix() {
@@ -22,81 +24,81 @@ body{
   }
 }
 
-/*首页*/
-.home-header {
+/*导航条*/
+.nav-bar {
   width: 100%;
-  /*导航条*/
-  .nav-bar {
-    width: 100%;
-    height: 60px;
-    background-color: #0E48B4;
-    position: fixed;
-    top: 0;
-    //left: 0;
-    z-index: 200;
-    box-shadow: 0 2px 2px rgba(0,0,0,.2);
-    .container {
-      .clearfix();
-      .logo {
-        float: left;
-        a {
-          width: 118px;
-          height: 24px;
-          //border: 1px solid pink;
-          margin-top: 18px;
-        }
+  height: 60px;
+  background-color: @bg-color;
+  position: fixed;
+  top: 0;
+  z-index: 200;
+  box-shadow: 0 2px 2px rgba(0,0,0,.2);
+  .container {
+    .clearfix();
+    .logo {
+      float: left;
+      a {
+        width: 118px;
+        height: 24px;
+        //border: 1px solid pink;
+        margin-top: 18px;
       }
-      .nav {
-        float: right;
-        margin-right: -35px;
-        a {
-          //border: 1px solid blue;
-          height: 60px;
-          float: left;
+    }
+    .nav {
+      float: right;
+      margin-right: -35px;
+      a {
+        //border: 1px solid blue;
+        height: 60px;
+        float: left;
+        span {
+          color: white;
+          display: block;
+          padding: 0 35px;
+          line-height: 60px;
+        }
+        em {
+          display: none;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: white;
+          position: relative;
+          top: -16px;
+          left: 0;
+          right: 0;
+          margin: auto;
+        }
+        &.active {
           span {
-            color: white;
-            display: block;
-            padding: 0 35px;
-            line-height: 60px;
+            color: @txt-color;
           }
           em {
-            display: none;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background-color: white;
-            position: relative;
-            top: -16px;
-            left: 0;
-            right: 0;
-            margin: auto;
+            display: block;
+            background-color: @txt-color;
           }
-          &.active {
-            span {
-              color: #FFD24C;
-            }
-            em {
-              display: block;
-              background-color: #FFD24C;
-            }
+        }
+        &:hover {
+          span {
+            color: @txt-color;
           }
-          &:hover {
-            span {
-              color: #FFD24C;
-            }
-            em {
-              display: block;
-              background-color: #FFD24C;
-            }
+          em {
+            display: block;
+            background-color: @txt-color;
           }
         }
       }
     }
   }
+}
+
+/*首页*/
+.home-header {
+  width: 100%;
   /*banner*/
   .home-banner {
     width: 100%;
-    background: url("../images/bg/bg1.png") #0E48B4;
+    background: url("../images/bg/bg1.png") @bg-color;
     margin-top: 60px;
     .container {
       //border: 1px solid #ffffff;
@@ -247,7 +249,7 @@ body{
 .home-ddn {
   width: 100%;
   height: 387px;
-  background: url("../images/bg/bg2.png") #0E48B4;
+  background: url("../images/bg/bg2.png") @bg-color;
   .container {
     .ddn{
       padding-top: 132px;
@@ -259,7 +261,7 @@ body{
         padding-right: 5%;
         //border: 1px solid #000;
         span {
-          color: #FFD24C;
+          color: @txt-color;
           font-size: 72px;
           display: block;
           text-align: center;
@@ -329,8 +331,8 @@ body{
               line-height: 44px;
               color: #ffffff;
               &:hover {
-                background-color: #0E48B4;
-                border: 1px solid #0E48B4;
+                background-color: @bg-color;
+                border: 1px solid @bg-color;
                 color: white;
               }
             }
@@ -371,109 +373,6 @@ body{
           }
         }
       }
-
-      /*.variety-item {
-        height: 616px;
-        //border: 1px solid green;
-        margin-top: 150px;
-        margin-bottom: 150px;
-        color: white;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-between;
-      }*/
-      /*.left_column {
-        width: 326px;
-        .variety_forex_container {
-          width: 326px;
-          height: 280px;
-          background: url("../images/img/img_trade_forex.png");
-          .variety_forex_content {
-            padding-top: 29px;
-            margin-left: 28px;
-            margin-right: 28px;
-            > h3 {
-              font-size: 24px;
-              margin-bottom: 10px;
-            }
-            > p {
-              font-size: 14px;
-              line-height: 24px;
-            }
-          }
-          .variety_forex_more {
-            width: 158px;
-            height: 44px;
-            border: 1px solid white;
-            border-radius: 22px;
-            margin-top: 30px;
-            margin-left: 28px;
-            text-align: center;
-            line-height: 44px;
-            cursor: pointer;
-            &:hover {
-              background-color: #0E48B4;
-              border: 1px solid #0E48B4;
-              color: white;
-            }
-          }
-        }
-        .variety_oil {
-          width: 326px;
-          height: 280px;
-          background: url("../images/img/img_trade_oil.png");
-          text-align: center;
-          line-height: 280px;
-          font-size: 24px;
-        }
-        .item_left_content {
-          width: 270px;
-          height: 126px;
-          border: 1px solid red;
-        }
-      }*/
-      /*.middle_column {
-        width: 326px;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-between;
-        .variety_metal {
-          width: 326px;
-          height: 280px;
-          background: url("../images/img/img_trade_gold.png");
-          text-align: center;
-          line-height: 280px;
-          font-size: 24px;
-        }
-        .variety_sensex {
-          width: 326px;
-          height: 280px;
-          background: url("../images/img/img_trade_cfd.png");
-          text-align: center;
-          line-height: 280px;
-          font-size: 24px;
-        }
-      }*/
-      /*.right_column {
-        width: 434px;
-        height: 616px;
-        background: url("../images/img/img_trade.png");
-        .variety_many {
-          //border: 1px solid #000;
-          margin-top: 73px;
-          margin-right: 161px;
-          margin-left: 59px;
-          > h3 {
-            font-size: 24px;
-            white-space: nowrap;
-          }
-          > p {
-            font-size: 14px;
-            line-height: 35px;
-            text-align: center;
-          }
-        }
-      }*/
     }
   }
 }
@@ -525,8 +424,8 @@ body{
           margin-right: 28px;
           .detail{
             height: 50px;
-            border: 1px solid #0E48B4;
-            color: #0e48b4;
+            border: 1px solid @bg-color;
+            color: @bg-color;
             border-radius:25px;
             cursor: pointer;
             text-align: center;
@@ -550,7 +449,7 @@ body{
           .QRcode{
             width: 180px;
             height: 180px;
-            border: 1px solid #0E48B4;
+            border: 1px solid @bg-color;
             margin-top: 5px;
             display: none;
             img{
@@ -560,7 +459,7 @@ body{
           }
           &.active{
             .detail{
-              background: #0E48B4;
+              background: @bg-color;
               .icon{
                 background: url("../images/icon/home_icon_iphone_sel.png");
               }
@@ -619,78 +518,10 @@ body{
 
 /*风险提示*/
 .risk-header{
-  /*导航条*/
-  .nav-bar {
-    width: 100%;
-    height: 60px;
-    background-color: #0E48B4;
-    position: fixed;
-    top: 0;
-    //left: 0;
-    z-index: 200;
-    box-shadow: 0 2px 2px rgba(0,0,0,.2);
-    .container {
-      .clearfix();
-      .logo {
-        float: left;
-        a {
-          width: 118px;
-          height: 24px;
-          //border: 1px solid pink;
-          margin-top: 18px;
-        }
-      }
-      .nav {
-        float: right;
-        margin-right: -35px;
-        a {
-          //border: 1px solid blue;
-          height: 60px;
-          float: left;
-          span {
-            color: white;
-            display: block;
-            padding: 0 35px;
-            line-height: 60px;
-          }
-          em {
-            display: none;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background-color: white;
-            position: relative;
-            top: -16px;
-            left: 0;
-            right: 0;
-            margin: auto;
-          }
-          &.active {
-            span {
-              color: #FFD24C;
-            }
-            em {
-              display: block;
-              background-color: #FFD24C;
-            }
-          }
-          &:hover {
-            span {
-              color: #FFD24C;
-            }
-            em {
-              display: block;
-              background-color: #FFD24C;
-            }
-          }
-        }
-      }
-    }
-  }
   /*banner*/
   .risk-banner{
     width: 100%;
-    background: url("../images/bg/bg_risk.png") #0E48B4 no-repeat;
+    background: url("../images/bg/bg_risk.png") @bg-color no-repeat;
     margin-top: 60px;
     .container{
       //border: 1px solid #ffffff;
@@ -747,78 +578,10 @@ body{
 
 /*交易平台*/
 .platform-header{
-  /*导航条*/
-  .nav-bar {
-    width: 100%;
-    height: 60px;
-    background-color: #0E48B4;
-    position: fixed;
-    top: 0;
-    //left: 0;
-    z-index: 200;
-    box-shadow: 0 2px 2px rgba(0,0,0,.2);
-    .container {
-      .clearfix();
-      .logo {
-        float: left;
-        a {
-          width: 118px;
-          height: 24px;
-          //border: 1px solid pink;
-          margin-top: 18px;
-        }
-      }
-      .nav {
-        float: right;
-        margin-right: -35px;
-        a {
-          //border: 1px solid blue;
-          height: 60px;
-          float: left;
-          span {
-            color: white;
-            display: block;
-            padding: 0 35px;
-            line-height: 60px;
-          }
-          em {
-            display: none;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background-color: white;
-            position: relative;
-            top: -16px;
-            left: 0;
-            right: 0;
-            margin: auto;
-          }
-          &.active {
-            span {
-              color: #FFD24C;
-            }
-            em {
-              display: block;
-              background-color: #FFD24C;
-            }
-          }
-          &:hover {
-            span {
-              color: #FFD24C;
-            }
-            em {
-              display: block;
-              background-color: #FFD24C;
-            }
-          }
-        }
-      }
-    }
-  }
   /*banner*/
   .platform-banner{
     width: 100%;
-    background: url("../images/bg/bg_risk.png") #0E48B4 no-repeat;
+    background: url("../images/bg/bg_risk.png") @bg-color no-repeat;
     margin-top: 60px;
     .container{
       //border: 1px solid #ffffff;
@@ -867,15 +630,15 @@ body{
       .pc_versions_download{
         width:200px;
         height:70px;
-        border: 1px solid #0E48B4;
+        border: 1px solid @bg-color;
         border-radius:35px;
         margin-top: 52px;
-        color: #0E48B4;
+        color: @bg-color;
         text-align: center;
         line-height: 70px;
         cursor: pointer;
         &:hover{
-          background: #0E48B4;
+          background: @bg-color;
           color: white;
         }
       }
@@ -905,23 +668,23 @@ body{
         .app_Android, .app_iOS{
           width:240px;
           height:70px;
-          border: 1px solid #0E48B4;
+          border: 1px solid @bg-color;
           box-sizing: border-box;
           border-radius:35px;
           margin-top: 52px;
-          color: #0E48B4;
+          color: @bg-color;
           text-align: center;
           line-height: 70px;
           cursor: pointer;
 
           &:hover{
-            background: #0E48B4;
+            background: @bg-color;
             color: white;
           }
           .Android_QRcode {
             width: 240px;
             height: 240px;
-            //border: 1px solid #0E48B4;
+            //border: 1px solid @bg-color;
             margin-top: 5px;
             text-indent: -9999px;
             display: none;
@@ -929,7 +692,7 @@ body{
           .iOS_QRcode {
             width: 240px;
             height: 240px;
-            //border: 1px solid #0E48B4;
+            //border: 1px solid @bg-color;
             margin-top: 5px;
             text-indent: -9999px;
             display: none;
@@ -968,78 +731,10 @@ body{
 
 /*交易品种*/
 .variety-header{
-  /*导航条*/
-  .nav-bar {
-    width: 100%;
-    height: 60px;
-    background-color: #0E48B4;
-    position: fixed;
-    top: 0;
-    //left: 0;
-    z-index: 200;
-    box-shadow: 0 2px 2px rgba(0,0,0,.2);
-    .container {
-      .clearfix();
-      .logo {
-        float: left;
-        a {
-          width: 118px;
-          height: 24px;
-          //border: 1px solid pink;
-          margin-top: 18px;
-        }
-      }
-      .nav {
-        float: right;
-        margin-right: -35px;
-        a {
-          //border: 1px solid blue;
-          height: 60px;
-          float: left;
-          span {
-            color: white;
-            display: block;
-            padding: 0 35px;
-            line-height: 60px;
-          }
-          em {
-            display: none;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background-color: white;
-            position: relative;
-            top: -16px;
-            left: 0;
-            right: 0;
-            margin: auto;
-          }
-          &.active {
-            span {
-              color: #FFD24C;
-            }
-            em {
-              display: block;
-              background-color: #FFD24C;
-            }
-          }
-          &:hover {
-            span {
-              color: #FFD24C;
-            }
-            em {
-              display: block;
-              background-color: #FFD24C;
-            }
-          }
-        }
-      }
-    }
-  }
   /*banner*/
   .variety-banner{
     width: 100%;
-    background: url("../images/bg/bg_risk.png") #0E48B4 no-repeat;
+    background: url("../images/bg/bg_risk.png") @bg-color no-repeat;
     margin-top: 60px;
     .container{
       //border: 1px solid #ffffff;
@@ -1117,16 +812,16 @@ body{
         border-radius:0px 0px 10px 10px;
         .content_detail{
           padding-bottom: 30px;
-          > h3{
+          h3{
             color: #000527;
             font-size: 24px;
             margin-bottom: 10px;
             font-weight: bold;
-            > span{
-              color: #0E48B4;
+            span{
+              color: @bg-color;
             }
           }
-          > p{
+          p{
             color: #505050;
             font-size: 14px;
             line-height: 24px;
@@ -1136,15 +831,15 @@ body{
           display: block;
           width:200px;
           height:50px;
-          border: 1px solid #0E48B4;
+          border: 1px solid @bg-color;
           border-radius:25px;
           margin-bottom: 31px;
           text-align: center;
           line-height: 50px;
-          color: #0E48B4;
+          color: @bg-color;
           cursor: pointer;
           &:hover{
-            background: #0E48B4;
+            background: @bg-color;
             color: white;
           }
         }
@@ -1156,73 +851,6 @@ body{
 /*金属合约*/
 .metal_header{
   background: url("../images/bg/bg_gold.jpg") no-repeat;
-  /*导航条*/
-  .nav-bar {
-    width: 100%;
-    height: 60px;
-    position: fixed;
-    top: 0;
-    //left: 0;
-    z-index: 200;
-    box-shadow: 0 2px 2px rgba(0,0,0,.2);
-    .container {
-      .clearfix();
-      .logo {
-        float: left;
-        a {
-          width: 118px;
-          height: 24px;
-          //border: 1px solid pink;
-          margin-top: 18px;
-        }
-      }
-      .nav {
-        float: right;
-        margin-right: -35px;
-        a {
-          //border: 1px solid blue;
-          height: 60px;
-          float: left;
-          span {
-            color: white;
-            display: block;
-            padding: 0 35px;
-            line-height: 60px;
-          }
-          em {
-            display: none;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background-color: white;
-            position: relative;
-            top: -16px;
-            left: 0;
-            right: 0;
-            margin: auto;
-          }
-          &.active {
-            span {
-              color: #FFD24C;
-            }
-            em {
-              display: block;
-              background-color: #FFD24C;
-            }
-          }
-          &:hover {
-            span {
-              color: #FFD24C;
-            }
-            em {
-              display: block;
-              background-color: #FFD24C;
-            }
-          }
-        }
-      }
-    }
-  }
   /*banner*/
   .variety_banner{
     .container{
@@ -1246,14 +874,14 @@ body{
         display: inline-block;
         width: 200px;
         height: 200px;
-        background: url("../images/icon/platform_icon_gold.png") no-repeat #0E48B4 center;
+        background: url("../images/icon/platform_icon_gold.png") no-repeat @bg-color center;
         border-radius: 50%;
       }
       .main_card_title{
         margin-top: 40px;
         h2{
           font-size: 30px;
-          color: #0E48B4;
+          color: @bg-color;
         }
         span{
           font-size: 14px;
@@ -1281,7 +909,7 @@ body{
           text-align: center;
           line-height: 60px;
           .product_name{
-            background-color: #0E48B4;
+            background-color: @bg-color;
             color: white;
           }
           &:first-child{
@@ -1302,7 +930,7 @@ body{
           &:last-child{
             width: 433px;
             .product_name{
-              border-right: 1px solid #0E48B4;
+              border-right: 1px solid @bg-color;
             }
             .product_time{
               height: 120px;
@@ -1354,71 +982,8 @@ body{
 .oil_header{
   background: url("../images/bg/bg_oil.jpg") no-repeat;
   /*导航条*/
-  .nav-bar {
-    width: 100%;
-    height: 60px;
-    position: fixed;
-    top: 0;
-    //left: 0;
-    z-index: 200;
-    box-shadow: 0 2px 2px rgba(0,0,0,.2);
-    .container {
-      .clearfix();
-      .logo {
-        float: left;
-        a {
-          width: 118px;
-          height: 24px;
-          //border: 1px solid pink;
-          margin-top: 18px;
-        }
-      }
-      .nav {
-        float: right;
-        margin-right: -35px;
-        a {
-          //border: 1px solid blue;
-          height: 60px;
-          float: left;
-          span {
-            color: white;
-            display: block;
-            padding: 0 35px;
-            line-height: 60px;
-          }
-          em {
-            display: none;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background-color: white;
-            position: relative;
-            top: -16px;
-            left: 0;
-            right: 0;
-            margin: auto;
-          }
-          &.active {
-            span {
-              color: #FFD24C;
-            }
-            em {
-              display: block;
-              background-color: #FFD24C;
-            }
-          }
-          &:hover {
-            span {
-              color: #FFD24C;
-            }
-            em {
-              display: block;
-              background-color: #FFD24C;
-            }
-          }
-        }
-      }
-    }
+  .nav-bar{
+    background: transparent;
   }
   /*banner*/
   .oil_banner{
@@ -1444,14 +1009,14 @@ body{
         display: inline-block;
         width: 200px;
         height: 200px;
-        background: url("../images/icon/platform_icon_oil.png") no-repeat #0E48B4 center;
+        background: url("../images/icon/platform_icon_oil.png") no-repeat @bg-color center;
         border-radius: 50%;
       }
       .main_card_title{
         margin-top: 40px;
         h2{
           font-size: 30px;
-          color: #0E48B4;
+          color: @bg-color;
         }
         span{
           font-size: 14px;
@@ -1479,7 +1044,7 @@ body{
           text-align: center;
           line-height: 60px;
           .product_name{
-            background-color: #0E48B4;
+            background-color: @bg-color;
             color: white;
           }
           &:first-child{
@@ -1500,7 +1065,7 @@ body{
           &:last-child{
             width: 433px;
             .product_name{
-              border-right: 1px solid #0E48B4;
+              border-right: 1px solid @bg-color;
             }
             .product_time{
               height: 121px;
@@ -1552,74 +1117,8 @@ body{
 /*客户帮助*/
 .help_header{
   background: url("../images/bg/bg_help.jpg") no-repeat;
-  /*导航条*/
-  .nav-bar {
-    width: 100%;
-    height: 60px;
-    //background-color: #0E48B4;
-    //background-color: transparent;
-    position: fixed;
-    top: 0;
-    //left: 0;
-    z-index: 200;
-    box-shadow: 0 2px 2px rgba(0,0,0,.2);
-    .container {
-      .clearfix();
-      .logo {
-        float: left;
-        a {
-          width: 118px;
-          height: 24px;
-          //border: 1px solid pink;
-          margin-top: 18px;
-        }
-      }
-      .nav {
-        float: right;
-        margin-right: -35px;
-        a {
-          //border: 1px solid blue;
-          height: 60px;
-          float: left;
-          span {
-            color: white;
-            display: block;
-            padding: 0 35px;
-            line-height: 60px;
-          }
-          em {
-            display: none;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background-color: white;
-            position: relative;
-            top: -16px;
-            left: 0;
-            right: 0;
-            margin: auto;
-          }
-          &.active {
-            span {
-              color: #FFD24C;
-            }
-            em {
-              display: block;
-              background-color: #FFD24C;
-            }
-          }
-          &:hover {
-            span {
-              color: #FFD24C;
-            }
-            em {
-              display: block;
-              background-color: #FFD24C;
-            }
-          }
-        }
-      }
-    }
+  .nav-bar{
+    background: transparent;
   }
   /*banner*/
   .help_banner{
@@ -1664,12 +1163,12 @@ body{
         color: #000527;
         margin: 0 24px;
         &:hover {
-          background-color: #0E48B4;
+          background-color: @bg-color;
           color: white;
         }
       }
       .active {
-        background-color: #0E48B4;
+        background-color: @bg-color;
         color: white;
       }
     }
@@ -1700,7 +1199,7 @@ body{
           width: 20px;
           float: left;
           height: 4px;
-          background-color: #0E48B4;
+          background-color: @bg-color;
         }
         .vessel_right{
           width: 311px;
@@ -1725,13 +1224,13 @@ body{
           }
           a{
             font-size: 14px;
-            color: #0E48B4;
+            color: @bg-color;
             margin-top: 28px;
           }
         }
       }
       &.checked{
-        background-color: #0E48B4;
+        background-color: @bg-color;
         .vessel_left{
           background-color: #F2F1EF;
         }
@@ -1748,7 +1247,7 @@ body{
         }
       }
       &:hover{
-        background-color: #0E48B4;
+        background-color: @bg-color;
         .vessel_left{
           background-color: white;
         }
@@ -1771,74 +1270,8 @@ body{
 /*文章详情*/
 .article_header{
   background: url("../images/bg/bg_help.jpg") no-repeat;
-  /*导航条*/
-  .nav-bar {
-    width: 100%;
-    height: 60px;
-    //background-color: #0E48B4;
-    //background-color: transparent;
-    position: fixed;
-    top: 0;
-    //left: 0;
-    z-index: 200;
-    box-shadow: 0 2px 2px rgba(0,0,0,.2);
-    .container {
-      .clearfix();
-      .logo {
-        float: left;
-        a {
-          width: 118px;
-          height: 24px;
-          //border: 1px solid pink;
-          margin-top: 18px;
-        }
-      }
-      .nav {
-        float: right;
-        margin-right: -35px;
-        a {
-          //border: 1px solid blue;
-          height: 60px;
-          float: left;
-          span {
-            color: white;
-            display: block;
-            padding: 0 35px;
-            line-height: 60px;
-          }
-          em {
-            display: none;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background-color: white;
-            position: relative;
-            top: -16px;
-            left: 0;
-            right: 0;
-            margin: auto;
-          }
-          &.active {
-            span {
-              color: #FFD24C;
-            }
-            em {
-              display: block;
-              background-color: #FFD24C;
-            }
-          }
-          &:hover {
-            span {
-              color: #FFD24C;
-            }
-            em {
-              display: block;
-              background-color: #FFD24C;
-            }
-          }
-        }
-      }
-    }
+  .nav-bar{
+    background: transparent;
   }
   /*banner*/
   .help_banner{
@@ -1885,12 +1318,12 @@ body{
           color: #000527;
           margin: 0 24px;
           &:hover {
-            background-color: #0E48B4;
+            background-color: @bg-color;
             color: white;
           }
         }
         .active {
-          background-color: #0E48B4;
+          background-color: @bg-color;
           color: white;
         }
       }
@@ -1921,18 +1354,18 @@ body{
         margin-right: 20px;
         width: 88px;
         height: 48px;
-        border: 1px solid #0E48B4;
+        border: 1px solid @bg-color;
         border-radius:4px;
-        color: #0E48B4;
+        color: @bg-color;
         text-align: center;
         line-height: 48px;
         &:hover{
-          background-color: #0E48B4;
+          background-color: @bg-color;
           color: white;
         }
       }
       .paging_pre{
-        background-color: #0E48B4;
+        background-color: @bg-color;
         color: white;
       }
     }
@@ -1942,74 +1375,8 @@ body{
 /*关于我们*/
 .about_header{
   background: url("../images/bg/bg_about.jpg") no-repeat;
-  /*导航条*/
-  .nav-bar {
-    width: 100%;
-    height: 60px;
-    //background-color: #0E48B4;
-    //background-color: transparent;
-    position: fixed;
-    top: 0;
-    //left: 0;
-    z-index: 200;
-    box-shadow: 0 2px 2px rgba(0,0,0,.2);
-    .container {
-      .clearfix();
-      .logo {
-        float: left;
-        a {
-          width: 118px;
-          height: 24px;
-          //border: 1px solid pink;
-          margin-top: 18px;
-        }
-      }
-      .nav {
-        float: right;
-        margin-right: -35px;
-        a {
-          //border: 1px solid blue;
-          height: 60px;
-          float: left;
-          span {
-            color: white;
-            display: block;
-            padding: 0 35px;
-            line-height: 60px;
-          }
-          em {
-            display: none;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background-color: white;
-            position: relative;
-            top: -16px;
-            left: 0;
-            right: 0;
-            margin: auto;
-          }
-          &.active {
-            span {
-              color: #FFD24C;
-            }
-            em {
-              display: block;
-              background-color: #FFD24C;
-            }
-          }
-          &:hover {
-            span {
-              color: #FFD24C;
-            }
-            em {
-              display: block;
-              background-color: #FFD24C;
-            }
-          }
-        }
-      }
-    }
+  .nav-bar{
+    background: transparent;
   }
   /*banner*/
   .variety_banner{
@@ -2084,12 +1451,12 @@ body{
         }
       }
       &:hover{
-        background-color: #0E48B4;
+        background-color: @bg-color;
         .content_detail{
-          > h3{
+          h3{
             color: white;
           }
-          > p{
+          p{
             color: white;
           }
         }
@@ -2128,7 +1495,7 @@ body{
       .butt_content{
         width: 350px;
         height: 400px;
-        background-color: #0E48B4;
+        background-color: @bg-color;
         padding: 74px 56px 80px;
         box-sizing: border-box;
         border-radius:4px;
@@ -2182,7 +1549,7 @@ body{
 }
 /*我们的优势*/
 .about_advantage{
-  background: url("../images/bg/bg1.png") no-repeat #0E48B4;
+  background: url("../images/bg/bg1.png") no-repeat @bg-color;
   .clearfix();
   .advantage_content{
     width: 50%;
@@ -2293,7 +1660,7 @@ body{
       float: right;
       width: 480px;
       height: 86px;
-      background-color: #0E48B4;
+      background-color: @bg-color;
       border-radius:43px;
       font-size: 18px;
       color: white;
@@ -2306,7 +1673,7 @@ body{
 /*底部*/
 .footer {
   width: 100%;
-  background: #0E48B4;
+  background: @bg-color;
   .container {
     //border: 1px solid #000;
     .footer_main {
